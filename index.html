@@ -15,5 +15,61 @@
       <a href="#">Journal</a>
       <a href="#">Donations</a>
     </div>
+
+    <div class="sr-root">
+      <div class="sr-main" style="display: flex;">
+        <header class="sr-header">
+          <div class="sr-header__logo"></div>
+        </header>
+        <div class="sr-container">   
+
+          <section class="container">
+            <h1>Recurring Donation</h1>
+            <button checkout-mode="subscription" data-price-id="plan_GU4MXg0k0Uv1S6" >Donate $20.00 per month</button>
+          </section>
+          
+        </div>
+        <div id="error-message"></div>
+      </div>
+    </div>
+    
+
+    <script>
+      var PUBLISHABLE_KEY = 'pk_test_51JTSirHzGyDtPLS303qlilJp25VjFeZwH0eEZTmcJgVV6XFnO0D2eOWv7t2ZAlaUUsRpjTycSMoCZYOgcRv9vZjA00KA1xNRTv';
+      var DOMAIN = location.href.replace(/[^/]*$/, '');
+
+      var stripe = Stripe(PUBLISHABLE_KEY);
+
+      // Handle any errors from Checkout
+      var handleResult = function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      };
+
+      document.querySelectorAll('button').forEach(function (button) {
+        button.addEventListener('click', function (e) {
+          var mode = e.target.dataset.checkoutMode;
+          var priceId = e.target.dataset.priceId;
+          var items = [{ price: priceId, quantity: 1 }];
+
+          // Make the call to Stripe.js to redirect to the checkout page
+          // with the sku or plan ID.
+          stripe
+            .redirectToCheckout({
+              mode: mode,
+              lineItems: items,
+              successUrl:
+                DOMAIN + 'success.html?session_id={CHECKOUT_SESSION_ID}',
+              cancelUrl:
+                DOMAIN + 'canceled.html?session_id={CHECKOUT_SESSION_ID}',
+            })
+            .then(handleResult);
+        });
+      });
+    </script>
+
+
   </body>
 </html>
