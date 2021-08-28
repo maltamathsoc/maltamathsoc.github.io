@@ -13,38 +13,15 @@
     <!-- Loading Stripe.js -->
     <script src="https://js.stripe.com/v3/"></script>
 
-    <script language="JavaScript">
-      function openNav() {
-        document.getElementById("sidenav").style.width = "15%";
-        document.getElementById("main").style.marginLeft = "15%";
-      }
-
-      function closeNav() {
-        document.getElementById("sidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-      }
-    </script>
-
     <meta name="viewport" content="width=device-width" />
     <title>MMS - Home Page</title>
   </head>
 
   <body>
-    <span
-      id="open_nav"
-      style="font-size: 30px; cursor: pointer"
-      onclick="openNav()"
-    >
-      &#9776;
-    </span>
+    <span id="open_nav" onclick="openNav()">&#9776;</span>
 
     <div id="sidenav">
-      <span
-        id="close_nav"
-        style="font-size: 30px; cursor: pointer"
-        onclick="closeNav()"
-        >&#215;</span
-      >
+      <span id="close_nav" onclick="closeNav()">&#215;</span>
 
       <img id="mms_logo" src="images/mms_logo_text.svg" />
       <a href="#">About</a>
@@ -105,6 +82,20 @@
             .then(handleResult);
         });
       });
+    </script>
+
+    <script language="JavaScript">
+      function openNav() {
+        document.getElementById("sidenav").style.width =
+          String(document.getElementById("mms_logo").clientWidth + 50) + "px";
+        document.getElementById("main").style.marginLeft =
+          String(document.getElementById("mms_logo").clientWidth + 50) + "px";
+      }
+
+      function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
     </script>
   </body>
 </html>
