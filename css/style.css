@@ -45,7 +45,18 @@
 
 #mms_logo {
   height: 55px;
+  cursor: pointer;
   padding: 0px 0px 20px 24px;
+}
+
+#mms_logo:hover {
+  height: 60px;
+  transition: 0.5s;
+}
+
+#mms_logo:not(:hover){
+  height: 55px;
+  transition: 0.5s;
 }
 
 #member_button{
