@@ -19,6 +19,7 @@
 }
 
 #open_nav {
+  padding-left: 10px;
   font-size: 30px;
   cursor: pointer;
   transition: 0.5s;
@@ -50,5 +51,4 @@
 #member_button{
   margin-left: 15%;
   padding: 0px 0px 0px 0px;
-}
 }
