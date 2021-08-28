@@ -3,10 +3,8 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/global.css" />
   <!-- Load Stripe.js on your website. -->
   <script src="https://js.stripe.com/v3/"></script>
   <link rel="shortcut icon" href="images/mms_logo_no_text.svg" type="image/svg" />
@@ -23,17 +21,11 @@
     <a href="#">Donations</a>
   </div>
 
-  <div class="sr-root">
-    <div class="sr-main" style="display: flex;">
-      <header class="sr-header">
-        <div class="sr-header__logo"></div>
-      </header>
-      <div class="sr-container">
-          <button data-checkout-mode="subscription" data-price-id="price_1JTTsIHzGyDtPLS3Kzg4hRuQ">
-            Become a member!
-          </button>
-      <div id="error-message"></div>
-    </div>
+    <button id="member_button" data-checkout-mode="subscription" data-price-id="price_1JTTsIHzGyDtPLS3Kzg4hRuQ">
+      Become a member!
+    </button>
+ 
+          
   </div>
   
 
