@@ -1,101 +1,90 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link
-      rel="shortcut icon"
-      href="images/mms_logo_no_text.svg"
-      type="image/svg"
-    />
 
-    <!-- Loading Stripe.js -->
-    <script src="https://js.stripe.com/v3/"></script>
+<head>
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/mms_logo_no_text.svg" type="image/svg" />
 
-    <meta name="viewport" content="width=device-width" />
-    <title>MMS - Home Page</title>
-  </head>
+  <!-- Loading Stripe.js -->
+  <script src="https://js.stripe.com/v3/"></script>
 
-  <body>
-    <span id="open_nav" onclick="openNav()">&#9776;</span>
+  <meta name="viewport" content="width=device-width" />
+  <title>MMS - Home Page</title>
+</head>
 
-    <div id="sidenav">
-      <span id="close_nav" onclick="closeNav()">&#215;</span>
+<body>
+  <span id="open_nav" onclick="openNav()">&#9776;</span>
 
-      <img id="mms_logo" src="images/mms_logo_text.svg" />
-      <a href="#">About</a>
-      <a href="#">News</a>
-      <a href="#">Journal</a>
-      <a href="#">Donations</a>
-    </div>
+  <div id="sidenav">
+    <span id="close_nav" onclick="closeNav()">&#215;</span>
 
-    <div id="main">
-      <button
-        id="member_button"
-        data-checkout-mode="subscription"
-        data-price-id="price_1JTTsIHzGyDtPLS3Kzg4hRuQ"
-      >
-        Become a member!
-      </button>
-    </div>
+    <img id="mms_logo" src="images/mms_logo_text.svg" onclick="document.location.href=DOMAIN + 'index.html' " />
+    <a href="#">About</a>
+    <a href="#">News</a>
+    <a href="#">Journal</a>
+    <a href="subscription.html">Membership</a>
+    <a href="#">Donations</a>
+  </div>
 
-    <script>
-      // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
-      var PUBLISHABLE_KEY =
-        "pk_test_51JTSirHzGyDtPLS303qlilJp25VjFeZwH0eEZTmcJgVV6XFnO0D2eOWv7t2ZAlaUUsRpjTycSMoCZYOgcRv9vZjA00KA1xNRTv";
-      // Replace with the domain you want your users to be redirected back to after payment
-      var DOMAIN = location.href.replace(/[^/]*$/, "");
+  <div id="main">
+    <h1>The Malta Mathematical Society</h1>
+  </div>
 
-      var stripe = Stripe(PUBLISHABLE_KEY);
+  <script>
+    // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
+    var PUBLISHABLE_KEY =
+      "pk_test_51JTSirHzGyDtPLS303qlilJp25VjFeZwH0eEZTmcJgVV6XFnO0D2eOWv7t2ZAlaUUsRpjTycSMoCZYOgcRv9vZjA00KA1xNRTv";
+    // Replace with the domain you want your users to be redirected back to after payment
+    var DOMAIN = location.href.replace(/[^/]*$/, "");
 
-      // Handle any errors from Checkout
-      var handleResult = function (result) {
-        if (result.error) {
-          var displayError = document.getElementById("error-message");
-          displayError.textContent = result.error.message;
-        }
-      };
+    var stripe = Stripe(PUBLISHABLE_KEY);
 
-      document.querySelectorAll("button").forEach(function (button) {
-        button.addEventListener("click", function (e) {
-          var mode = e.target.dataset.checkoutMode;
-          var priceId = e.target.dataset.priceId;
-          var items = [
-            {
-              price: priceId,
-              quantity: 1,
-            },
-          ];
+    // Handle any errors from Checkout
+    var handleResult = function (result) {
+      if (result.error) {
+        var displayError = document.getElementById("error-message");
+        displayError.textContent = result.error.message;
+      }
+    };
 
-          // Make the call to Stripe.js to redirect to the checkout page
-          // with the sku or plan ID.
-          stripe
-            .redirectToCheckout({
-              mode: mode,
-              lineItems: items,
-              successUrl:
-                DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
-              cancelUrl:
-                DOMAIN,
-            })
-            .then(handleResult);
-        });
+    document.querySelectorAll("button").forEach(function (button) {
+      button.addEventListener("click", function (e) {
+        var mode = e.target.dataset.checkoutMode;
+        var priceId = e.target.dataset.priceId;
+        var items = [{
+          price: priceId,
+          quantity: 1,
+        }, ];
+
+        // Make the call to Stripe.js to redirect to the checkout page
+        // with the sku or plan ID.
+        stripe
+          .redirectToCheckout({
+            mode: mode,
+            lineItems: items,
+            successUrl: DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
+            cancelUrl: DOMAIN,
+          })
+          .then(handleResult);
       });
-    </script>
+    });
+  </script>
 
-    <script language="JavaScript">
-      function openNav() {
-        document.getElementById("sidenav").style.width =
-          String(document.getElementById("mms_logo").clientWidth + 50) + "px";
-        document.getElementById("main").style.marginLeft =
-          String(document.getElementById("mms_logo").clientWidth + 50) + "px";
-      }
+  <script language="JavaScript">
+    function openNav() {
+      document.getElementById("sidenav").style.width =
+        String(document.getElementById("mms_logo").clientWidth + 50) + "px";
+      document.getElementById("main").style.marginLeft =
+        String(document.getElementById("mms_logo").clientWidth + 50) + "px";
+    }
 
-      function closeNav() {
-        document.getElementById("sidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-      }
-    </script>
-  </body>
+    function closeNav() {
+      document.getElementById("sidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
+</body>
+
 </html>
