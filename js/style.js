@@ -60,7 +60,7 @@ function closeNav() {
 }
 
 function rotateChevron(id) {
-  if (document.getElementById(id).style.transform === ("rotate(-90deg)")) {
+  if (document.getElementById(id).style.transform === "rotate(-90deg)") {
     document.getElementById(id).style.transform = "rotate(0deg)";
   } else {
     document.getElementById(id).style.transform = "rotate(-90deg)";
