@@ -20,8 +20,36 @@ function openNav(ext) {
 
   close_container.style.paddingRight = String(3 * gradient_offset) + "px";
 
-  /* mms_logo.style.paddingTop = String(ext / 8) + "px"; */
-  /* mms_logo.style.paddingBottom = String(ext / 8) + "px"; */
+  var height_mms_logo = parseInt(
+    window
+      .getComputedStyle(document.getElementById("mms_logo"), null)
+      .getPropertyValue("height")
+  );
+  var height_close_container = parseInt(
+    window
+      .getComputedStyle(document.getElementById("close_container"), null)
+      .getPropertyValue("height")
+  );
+  var height_menu = parseInt(
+    window
+      .getComputedStyle(document.getElementById("menu"), null)
+      .getPropertyValue("height")
+  );
+  var height_sidenav = parseInt(
+    window
+      .getComputedStyle(document.getElementById("sidenav"), null)
+      .getPropertyValue("height")
+  );
+
+  /* console.log(height_sidenav, height_mms_logo, height_close_container, height_menu); */
+
+  var padd =
+    (height_sidenav - height_mms_logo - height_close_container) / 2 -
+    height_menu * 2;
+
+  /* var padd = height_sidenav / 2 - height_menu - height_mms_logo - height_close_container; */
+
+  menu.style.paddingTop = String(padd) + "px";
 }
 
 function closeNav() {
