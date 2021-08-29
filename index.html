@@ -1,90 +1,94 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link
-      rel="shortcut icon"
-      href="images/mms_logo_no_text.svg"
-      type="image/svg"
-    />
 
-    <!-- Loading scripts -->
-    <script src="https://js.stripe.com/v3/"></script>
-    <script src="js/style.js"></script>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <meta name="viewport" content="width=device-width" />
-    <title>MMS - Home Page</title>
-  </head>
+  <link rel="shortcut icon" href="images/mms_logo_no_text.svg" type="image/svg" />
 
-  <body>
-    <span id="open_nav" onclick="openNav(80)">&#9776;</span>
+  <!-- Loading scripts -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="js/style.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 
-    <div id="sidenav">
-      <div id="nav_container">
-        <div id="close_container"><span id="close_nav" onclick="closeNav()">&#8249;</span></div>
-        <!--onmouseover="updatePadding(5)" onmouseout="updatePadding(-5)"-->
-        <img
-          id="mms_logo"
-          src="images/mms_logo_text.svg"
-          onclick="document.location.href=DOMAIN"
-        />
-        <div id="menu">
-          <a href="#">About</a>
-          <a href="#">News</a>
-          <a href="#">Journal</a>
-          <a href="subscription">Membership</a>
-          <a href="#">Donations</a>
+  <meta name="viewport" content="width=device-width" />
+  <title>MMS - Home Page</title>
+</head>
+
+<body>
+  <span id="open_nav" onclick="openNav(80)">&#9776;</span>
+
+  <div id="sidenav">
+    <div id="nav_container">
+      <div id="close_container"><span id="close_nav" onclick="closeNav()">&#8249;</span></div>
+      <!--onmouseover="updatePadding(5)" onmouseout="updatePadding(-5)"-->
+      <img id="mms_logo" src="images/mms_logo_text.svg" onclick="document.location.href=DOMAIN" />
+      <div id="menu">
+        <div><a href="#">About</a> <i data-feather="chevron-left"></i>
+        </div>
+        <div><a href="#">News</a> <i data-feather="chevron-left"></i>
+        </div>
+        <div><a href="#">Journal</a> <i data-feather="chevron-left"></i>
+        </div>
+        <div><a href="subscription">Membership</a> <i data-feather="chevron-left"></i>
+        </div>
+        <div><a href="#">Donations</a> <i data-feather="chevron-left"></i>
+        </div>
+        <div><a href="#">About</a> <i data-feather="chevron-left"></i>
         </div>
       </div>
     </div>
+  </div>
 
-    <div id="main">
-      <h1>The Malta Mathematical Society</h1>
-    </div>
+  <div id="main">
+    <h1>The Malta Mathematical Society</h1>
+  </div>
 
-    <script>
-      // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
-      var PUBLISHABLE_KEY =
-        "pk_test_51JTSirHzGyDtPLS303qlilJp25VjFeZwH0eEZTmcJgVV6XFnO0D2eOWv7t2ZAlaUUsRpjTycSMoCZYOgcRv9vZjA00KA1xNRTv";
-      // Replace with the domain you want your users to be redirected back to after payment
-      var DOMAIN = location.href.replace(/[^/]*$/, "");
+  <script>
+    // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
+    var PUBLISHABLE_KEY =
+      "pk_test_51JTSirHzGyDtPLS303qlilJp25VjFeZwH0eEZTmcJgVV6XFnO0D2eOWv7t2ZAlaUUsRpjTycSMoCZYOgcRv9vZjA00KA1xNRTv";
+    // Replace with the domain you want your users to be redirected back to after payment
+    var DOMAIN = location.href.replace(/[^/]*$/, "");
 
-      var stripe = Stripe(PUBLISHABLE_KEY);
+    var stripe = Stripe(PUBLISHABLE_KEY);
 
-      // Handle any errors from Checkout
-      var handleResult = function (result) {
-        if (result.error) {
-          var displayError = document.getElementById("error-message");
-          displayError.textContent = result.error.message;
-        }
-      };
+    // Handle any errors from Checkout
+    var handleResult = function (result) {
+      if (result.error) {
+        var displayError = document.getElementById("error-message");
+        displayError.textContent = result.error.message;
+      }
+    };
 
-      document.querySelectorAll("button").forEach(function (button) {
-        button.addEventListener("click", function (e) {
-          var mode = e.target.dataset.checkoutMode;
-          var priceId = e.target.dataset.priceId;
-          var items = [
-            {
-              price: priceId,
-              quantity: 1,
-            },
-          ];
+    document.querySelectorAll("button").forEach(function (button) {
+      button.addEventListener("click", function (e) {
+        var mode = e.target.dataset.checkoutMode;
+        var priceId = e.target.dataset.priceId;
+        var items = [{
+          price: priceId,
+          quantity: 1,
+        }, ];
 
-          // Make the call to Stripe.js to redirect to the checkout page
-          // with the sku or plan ID.
-          stripe
-            .redirectToCheckout({
-              mode: mode,
-              lineItems: items,
-              successUrl:
-                DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
-              cancelUrl: DOMAIN,
-            })
-            .then(handleResult);
-        });
+        // Make the call to Stripe.js to redirect to the checkout page
+        // with the sku or plan ID.
+        stripe
+          .redirectToCheckout({
+            mode: mode,
+            lineItems: items,
+            successUrl: DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
+            cancelUrl: DOMAIN,
+          })
+          .then(handleResult);
       });
-    </script>
-  </body>
+    });
+  </script>
+  <script>
+    feather.replace()
+  </script>
+</body>
+
 </html>
