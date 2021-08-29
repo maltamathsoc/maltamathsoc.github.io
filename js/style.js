@@ -58,3 +58,11 @@ function closeNav() {
   document.getElementById("sidenav").style.paddingRight = "0";
   document.getElementById("main").style.marginLeft = "0";
 }
+
+function rotateChevron(id) {
+  if (document.getElementById(id).style.transform === ("rotate(-90deg)")) {
+    document.getElementById(id).style.transform = "rotate(0deg)";
+  } else {
+    document.getElementById(id).style.transform = "rotate(-90deg)";
+  }
+}
