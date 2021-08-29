@@ -46,6 +46,15 @@
   justify-content: space-between;
 }
 
+.arrow {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.arrow:hover {
+  color: #0072ce;
+}
+
 #open_nav {
   padding-left: 10px;
   font-size: 30px;
