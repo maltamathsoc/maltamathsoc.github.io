@@ -59,7 +59,7 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
 }
 
-function rotateChevron(id) {
+function openTree(id) {
   if (document.getElementById(id).style.transform === "rotate(-90deg)") {
     document.getElementById(id).style.transform = "rotate(0deg)";
   } else {
