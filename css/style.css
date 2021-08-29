@@ -20,10 +20,21 @@
 }
 
 #sidenav #nav_container #menu a {
-  padding: 7% 8px 7% 40px;
+  padding: 5px 8px 5px 40px;
   text-decoration: none;
-  font-size: 25px;
-  display: block;
+  font-size: 19px;
+  font-family: 'Lato', sans-serif;
+  display: inline;
+}
+#sidenav #nav_container #menu {
+  padding-right: 10px;
+}
+
+
+#sidenav #nav_container #menu div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #open_nav {
@@ -54,6 +65,7 @@
   display: flex;
   justify-content: center;
   height: 55px;
+  padding-top: 5px;
   cursor: pointer;
   margin: auto;
 }
@@ -63,12 +75,12 @@
   transition: 0.5s;
 }
 
-#mms_logo:not(:hover){
+#mms_logo:not(:hover) {
   height: 55px;
   transition: 0.5s;
 }
 
-#member_button{
+#member_button {
   margin-left: 15%;
   padding: 0px 0px 0px 0px;
 }
