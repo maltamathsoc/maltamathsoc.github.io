@@ -1,9 +1,8 @@
-function openNav(ext) {
+function openNav(ext, grad_offset) {
   var mms_logo = document.getElementById("mms_logo");
   var sidenav = document.getElementById("sidenav");
   var main = document.getElementById("main");
   var close_container = document.getElementById("close_container");
-  
   var menu = document.getElementById("menu");
 
   var width = mms_logo.width + ext;
@@ -11,16 +10,16 @@ function openNav(ext) {
   sidenav.style.width = String(width) + "px";
   main.style.marginLeft = String(width) + "px";
 
-  var gradient_offset = 5;
-
   sidenav.style.background =
     "linear-gradient(to right, #f5f5f5 " +
-    String(width - gradient_offset) +
+    String(width - grad_offset) +
     "px, #c7c6c1)";
-  sidenav.style.paddingRight = String(gradient_offset) + "px";
+  sidenav.style.paddingRight = String(grad_offset) + "px";
 
-  close_container.style.paddingRight = String(3 * gradient_offset) + "px";
+  close_container.style.paddingRight = String(3 * grad_offset) + "px";
   close_container.style.paddingTop = "10px";
+
+  menu.style.paddingRight = String(3 * grad_offset) + "px";
 
   var height_mms_logo = parseInt(
     window

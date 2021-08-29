@@ -26,10 +26,19 @@
   font-family: 'Lato', sans-serif;
   display: inline;
 }
-#sidenav #nav_container #menu {
-  padding-right: 10px;
+
+
+#sidenav #nav_container #menu a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
 }
 
+#sidenav #nav_container #menu a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
 
 #sidenav #nav_container #menu div {
   display: flex;
@@ -83,4 +92,5 @@
 #member_button {
   margin-left: 15%;
   padding: 0px 0px 0px 0px;
+}
 }
