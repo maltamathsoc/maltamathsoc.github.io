@@ -46,12 +46,12 @@
   justify-content: space-between;
 }
 
-.arrow {
+.chevron {
   cursor: pointer;
   transition: 0.5s;
 }
 
-.arrow:hover {
+.chevron:hover {
   color: #0072ce;
 }
 
