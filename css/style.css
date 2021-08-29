@@ -20,7 +20,7 @@
 }
 
 #sidenav #nav_container #menu a {
-  padding: 5px 8px 5px 40px;
+  margin: 5px 8px 5px 40px;
   text-decoration: none;
   font-size: 19px;
   font-family: 'Lato', sans-serif;
@@ -101,5 +101,4 @@
 #member_button {
   margin-left: 15%;
   padding: 0px 0px 0px 0px;
-}
 }
