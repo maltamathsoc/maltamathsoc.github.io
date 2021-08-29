@@ -18,10 +18,6 @@
   transition: 0.5s;
 }
 
-#sidenav #nav_container #menu {
-  position: absolute;
-}
-
 #sidenav #nav_container #menu a {
   padding: 5% 8px 5% 40px;
   text-decoration: none;
