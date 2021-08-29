@@ -3,6 +3,7 @@ function openNav(ext) {
   var sidenav = document.getElementById("sidenav");
   var main = document.getElementById("main");
   var close_container = document.getElementById("close_container");
+  
   var menu = document.getElementById("menu");
 
   var width = mms_logo.width + ext;
@@ -19,6 +20,7 @@ function openNav(ext) {
   sidenav.style.paddingRight = String(gradient_offset) + "px";
 
   close_container.style.paddingRight = String(3 * gradient_offset) + "px";
+  close_container.style.paddingTop = "10px";
 
   var height_mms_logo = parseInt(
     window
