@@ -30,88 +30,72 @@
       <div id="menu">
         <div>
           <a href="#">About</a>
-          <i id="about" class="arrow" onclick="rotateChevron('about')" data-feather="chevron-left"></i>
+          <i id="about" class="chevron" onclick="rotateChevron('about')" data-feather="chevron-left"></i>
         </div>
         <div>
           <a href="#">News</a>
-          <i id="news" class="arrow" onclick="rotateChevron('news')" data-feather="chevron-left"></i>
+          <i id="news" class="chevron" onclick="rotateChevron('news')" data-feather="chevron-left"></i>
         </div>
         <div>
           <a href="#">Journal</a>
-          <i id="journal" class="arrow" onclick="rotateChevron('journal')" data-feather="chevron-left"></i>
+          <i id="journal" class="chevron" onclick="rotateChevron('journal')" data-feather="chevron-left"></i>
         </div>
         <div>
           <a href="membership">Membership</a>
-          <i id="membership" class="arrow" onclick="rotateChevron('membership')" data-feather="chevron-left"></i>
+          <i id="membership" class="chevron" onclick="rotateChevron('membership')" data-feather="chevron-left"></i>
         </div>
         <div>
           <a href="#">Donations</a>
-          <i id="donations" class="arrow" onclick="rotateChevron('donations')" data-feather="chevron-left"></i>
+          <i id="donations" class="chevron" onclick="rotateChevron('donations')" data-feather="chevron-left"></i>
         </div>
       </div>
     </div>
+  </div>
 
-    <div id="main">
-      <h1>The Malta Mathematical Society</h1>
-      <p>
-        The Malta Mathematical Society was formed in 1998. The first official society activity was a talk delivered by
-        Ms
-        Cettina Gauci Pulo (also one of the founders of the society), assistant lecturer at the University of Malta
-        Junior
-        College, and was entitled Discovering Fractals. The first general meeting was held on January 5th, 1999. The
-        first
-        committee was composed of the following members: Prof. Joseph Muscat (President), Audrienne Cutajar Bezzina,
-        Cettina Gauci Pulo, Dr. James L. Borg and Jill Kirkstadt.
+  <div id="main">
+    <h1>The Malta Mathematical Society</h1>
+  </div>
 
-        The society was responsible for the foundation of the Malta Mathematics Olympiad, which nowadays is in its 10th
-        edition and is independent from the society.
-        The questions from the 2002 Olympiad, still organised by the society at the time, are available online at: Paper
-        A
-        and Paper B.
-      </p>
+  <script>
+    // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
+    var PUBLISHABLE_KEY =
+      "pk_test_51JTSirHzGyDtPLS303qlilJp25VjFeZwH0eEZTmcJgVV6XFnO0D2eOWv7t2ZAlaUUsRpjTycSMoCZYOgcRv9vZjA00KA1xNRTv";
+    // Replace with the domain you want your users to be redirected back to after payment
+    var DOMAIN = location.href.replace(/[^/]*$/, "");
 
-      <script>
-        // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
-        var PUBLISHABLE_KEY =
-          "pk_test_51JTSirHzGyDtPLS303qlilJp25VjFeZwH0eEZTmcJgVV6XFnO0D2eOWv7t2ZAlaUUsRpjTycSMoCZYOgcRv9vZjA00KA1xNRTv";
-        // Replace with the domain you want your users to be redirected back to after payment
-        var DOMAIN = location.href.replace(/[^/]*$/, "");
+    var stripe = Stripe(PUBLISHABLE_KEY);
 
-        var stripe = Stripe(PUBLISHABLE_KEY);
+    // Handle any errors from Checkout
+    var handleResult = function (result) {
+      if (result.error) {
+        var displayError = document.getElementById("error-message");
+        displayError.textContent = result.error.message;
+      }
+    };
 
-        // Handle any errors from Checkout
-        var handleResult = function (result) {
-          if (result.error) {
-            var displayError = document.getElementById("error-message");
-            displayError.textContent = result.error.message;
-          }
-        };
+    document.querySelectorAll("button").forEach(function (button) {
+      button.addEventListener("click", function (e) {
+        var mode = e.target.dataset.checkoutMode;
+        var priceId = e.target.dataset.priceId;
+        var items = [{
+          price: priceId,
+          quantity: 1,
+        }, ];
 
-        document.querySelectorAll("button").forEach(function (button) {
-          button.addEventListener("click", function (e) {
-            var mode = e.target.dataset.checkoutMode;
-            var priceId = e.target.dataset.priceId;
-            var items = [{
-              price: priceId,
-              quantity: 1,
-            }, ];
-
-            // Make the call to Stripe.js to redirect to the checkout page
-            // with the sku or plan ID.
-            stripe
-              .redirectToCheckout({
-                mode: mode,
-                lineItems: items,
-                successUrl: DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
-                cancelUrl: DOMAIN,
-              })
-              .then(handleResult);
-          });
-        });
-      </script>
-      <script>
-        feather.replace()
-      </script>
+        // Make the call to Stripe.js to redirect to the checkout page
+        // with the sku or plan ID.
+        stripe
+          .redirectToCheckout({
+            mode: mode,
+            lineItems: items,
+            successUrl: DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
+            cancelUrl: DOMAIN,
+          })
+          .then(handleResult);
+      });
+    });
+    feather.replace()
+  </script>
 </body>
 
 </html>
