@@ -2,18 +2,11 @@
 
 <html>
   <head>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lato"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <link
-      rel="shortcut icon"
-      href="images/mms_logo_no_text.svg"
-      type="image/svg"
-    />
+    <link rel="shortcut icon" href="images/mms_logo_no_text.svg" type="image/svg" />
 
     <!-- Loading scripts -->
     <script src="https://js.stripe.com/v3/"></script>
@@ -26,86 +19,79 @@
 
   <body>
     <!-- TODO: Change to Icon openNav character -->
-    <span id="open_nav" onclick="openNav(80, 2, 4, '0.5s')">&#9776;</span>
+    <span id="open_nav" onclick="openNav(80, 2, 4)">&#9776;</span>
 
-    <div id="sidenav">
+    <div id="side_nav">
       <div id="nav_container">
         <!-- TODO: Change to Icon closeNav character -->
         <div id="close_container">
           <span id="close_nav" onclick="closeNav()">&#8249;</span>
         </div>
-        <img
-          id="mms_logo"
-          src="images/mms_logo_text.svg"
-          onclick="document.location.href=DOMAIN"
-        />
-        <div id="menu">
-          <!--<div>
-              <a href="#">About</a>
-              <i id="about" class="chevron" onclick="openTree('about')" data-feather="chevron-left"></i>
-            </div>
-            <div>
-              <a href="#">News</a>
-              <i id="news" class="chevron" onclick="openTree('news')" data-feather="chevron-left"></i>
-            </div>
-            <div>
-              <a href="#">Journal</a>
-              <i id="journal" class="chevron" onclick="openTree('journal')" data-feather="chevron-left"></i>
-            </div>
-            <div>
-              <a href="membership">Membership</a>
-              <i id="membership" class="chevron" onclick="openTree('membership')" data-feather="chevron-left"></i>
-            </div>
-            <div>
-              <a href="#">Donations</a>
-              <i id="donations" class="chevron" onclick="openTree('donations')" data-feather="chevron-left"></i>
-            </div>-->
-          <ul>
-            <li>
-              <div>
-                <a href="#">About us</a
-                ><i
-                  class="chevron"
-                  onclick="openTree(this)"
-                  data-feather="chevron-left"
-                ></i>
-              </div>
-              <div>
-                <a href="#">News</a
-                ><i
-                  class="chevron"
-                  onclick="openTree(this)"
-                  data-feather="chevron-left"
-                ></i>
-              </div>
-              <div>
-                <a href="#">Journal</a
-                ><i
-                  class="chevron"
-                  onclick="openTree(this)"
-                  data-feather="chevron-left"
-                ></i>
-              </div>
-              <div>
-                <a href="membership">Membership</a
-                ><i
-                  class="chevron"
-                  onclick="openTree(this)"
-                  data-feather="chevron-left"
-                ></i>
-              </div>
-              <div>
-                <a href="#">Donations</a
-                ><i
-                  class="chevron"
-                  onclick="openTree(this)"
-                  data-feather="chevron-left"
-                ></i>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <img id="mms_logo" src="images/mms_logo_text.svg" onclick="document.location.href=DOMAIN" />
       </div>
+        <!-- Menu Start -->
+        <div id="menu">
+          <div class="opt">
+            <div class="main_opt">
+              <a href="#">About us</a>
+              <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
+            </div>
+            <div class="sub_opt">
+              <a href="#">a</a>
+              <a href="#">b</a>
+              <a href="#">c</a>
+            </div>
+          </div>
+
+          <div class="opt">
+            <div class="main_opt">
+              <a href="#">News</a>
+              <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
+            </div>
+            <div class="sub_opt">
+              <a href="#">a</a>
+              <a href="#">b</a>
+              <a href="#">c</a>
+            </div>
+          </div>
+
+          <div class="opt">
+            <div class="main_opt">
+              <a href="#">Journal</a>
+              <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
+            </div>
+            <div class="sub_opt">
+              <a href="#">a</a>
+              <a href="#">b</a>
+              <a href="#">c</a>
+            </div>
+          </div>
+
+          <div class="opt">
+            <div class="main_opt">
+              <a href="membership">Membership</a>
+              <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
+            </div>
+            <div class="sub_opt">
+              <a href="#">a</a>
+              <a href="#">b</a>
+              <a href="#">c</a>
+            </div>
+          </div>
+
+          <div class="opt">
+            <div class="main_opt">
+              <a href="#">Donations</a>
+              <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
+            </div>
+            <div class="sub_opt">
+              <a href="#">a</a>
+              <a href="#">b</a>
+              <a href="#">c</a>
+            </div>
+          </div>
+        </div>
+        <!-- Menu End -->
     </div>
 
     <div id="main">
@@ -148,8 +134,7 @@
             .redirectToCheckout({
               mode: mode,
               lineItems: items,
-              successUrl:
-                DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
+              successUrl: DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
               cancelUrl: DOMAIN,
             })
             .then(handleResult);
