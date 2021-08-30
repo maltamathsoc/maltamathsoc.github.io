@@ -1,4 +1,4 @@
-function openNav(ext, grad_offset) {
+function openNav(ext, grad_offset, mult, transition) {
   var mms_logo = document.getElementById("mms_logo");
   var sidenav = document.getElementById("sidenav");
   var main = document.getElementById("main");
@@ -10,16 +10,18 @@ function openNav(ext, grad_offset) {
   sidenav.style.width = String(width) + "px";
   main.style.marginLeft = String(width) + "px";
 
+  sidenav.style.transition = transition;
+
   sidenav.style.background =
     "linear-gradient(to right, #f5f5f5 " +
     String(width - grad_offset) +
     "px, #c7c6c1)";
   sidenav.style.paddingRight = String(grad_offset) + "px";
 
-  close_container.style.paddingRight = String(3 * grad_offset) + "px";
+  close_container.style.paddingRight = String(mult * grad_offset) + "px";
   close_container.style.paddingTop = "10px";
 
-  menu.style.paddingRight = String(3 * grad_offset) + "px";
+  menu.style.paddingRight = String(mult * grad_offset) + "px";
 
   var height_mms_logo = parseInt(
     window
@@ -59,10 +61,10 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
 }
 
-function openTree(id) {
-  if (document.getElementById(id).style.transform === "rotate(-90deg)") {
-    document.getElementById(id).style.transform = "rotate(0deg)";
+function openTree(chevron) {
+  if (chevron.style.transform === "rotate(-90deg)") {
+    chevron.style.transform = "rotate(0deg)";
   } else {
-    document.getElementById(id).style.transform = "rotate(-90deg)";
+    chevron.style.transform = "rotate(-90deg)";
   }
 }
