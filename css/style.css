@@ -8,6 +8,14 @@
   background: linear-gradient(to right, #f5f5f5 99%, #c7c6c1);
   overflow-x: hidden;
   transition: 0.5s;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+}
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+#side_nav::-webkit-scrollbar {
+  display: none;
 }
 
 #close_container {
@@ -18,14 +26,19 @@
 }
 
 #menu {
-  padding-top: 20px;
+  padding-top: 10px;
+  z-index: 2;
 }
 
 #nav_container {
-  z-index: 2;
+  position: sticky;
   top: 0;
   left: 0;
-  align-self: center;
+  z-index: 3;
+  background-color: #f7f7f7;
+  background-image: linear-gradient(to top, #c7c6c1ff, #c7c6c100 1%),
+                    linear-gradient(to left, #c7c6c1ff, #c7c6c100 1%);
+
   transition: 0.5s;
 }
 
@@ -91,7 +104,7 @@
   color: #0072ce;
 }
 
-#close_container #close_nav {
+#close_nav {
   display: flex;
   justify-content: flex-end;
   font-size: 30px;
@@ -110,6 +123,7 @@
   justify-content: center;
   cursor: pointer;
   margin: auto;
+  padding-bottom: 20px;
 }
 
 #mms_logo:hover {
