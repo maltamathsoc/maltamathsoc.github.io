@@ -27,10 +27,9 @@
   padding-right: 10px;
 }
 
-#menu {
-  padding-top: 10px;
-  z-index: 2;
-}
+/* #menu { */
+/*   z-index: 2; */
+/* } */
 
 #nav_container {
   position: sticky;
@@ -50,7 +49,7 @@
 }
 
 .main_opt a {
-  margin: 5px 8px 5px 40px;
+  margin: 8px 8px 8px 40px;
   text-decoration: none;
   font-size: 19px;
   font-family: "Lato", sans-serif;
@@ -81,7 +80,7 @@
 }
 
 .sub_opt a {
-  padding: 8px 8px 5px 40px;
+  padding: 5px 8px 5px 40px;
   text-decoration: none;
   font-size: 17px;
   font-family: "Lato", sans-serif;
@@ -144,4 +143,5 @@
 #member_button {
   margin-left: 15%;
   padding: 0px 0px 0px 0px;
+}
 }
