@@ -19,11 +19,8 @@ function openTree(chevron) {
     chevron.style.transform = "rotate(-90deg)";
     opt.querySelector(".sub_opt").style.height =
       String(
-        opt
-          .getElementsByClassName("sub_opt")[0]
-          .getElementsByTagName("a")[0]
-          .getBoundingClientRect().height *
-          opt.querySelector(".sub_opt").getElementsByTagName("a").length + 0
+        opt.getElementsByClassName("sub_opt")[0].getElementsByTagName("a")[0].getBoundingClientRect().height *
+          opt.querySelector(".sub_opt").getElementsByTagName("a").length
       ) + "px";
     opt.querySelector(".sub_opt").style.padding = "8px 0px 8px 0px";
   }
