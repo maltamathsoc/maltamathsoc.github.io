@@ -25,4 +25,3 @@ function openTree(chevron) {
     opt.querySelector(".sub_opt").style.padding = "8px 0px 8px 0px";
   }
 }
-}
