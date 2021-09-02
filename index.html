@@ -20,89 +20,92 @@
 
 <body>
   <!-- TODO: Change to Icon openNav character -->
-  <span id="open_nav" onclick="openNav(80)">&#9776;</span>
-
-  <div id="side_nav">
-    <div id="nav_container">
-      <!-- TODO: Change to Icon closeNav character -->
-      <div id="close_container">
-        <span id="close_nav" onclick="closeNav()">&#8249;</span>
+  <div id="header">
+    <span id="open_nav" onclick="openNav(80)">&#9776;</span>
+    <h2 class="text_title">Malta Mathematical Society</h1>
+    <div id="side_nav">
+      <div id="nav_container">
+        <!-- TODO: Change to Icon closeNav character -->
+        <div id="close_container">
+          <span id="close_nav" onclick="closeNav()">&#8249;</span>
+        </div>
+        <img id="mms_logo" src="images/mms_logo_text.svg" onclick="document.location.href=DOMAIN" />
       </div>
-      <img id="mms_logo" src="images/mms_logo_text.svg" onclick="document.location.href=DOMAIN" />
+      <!-- Menu Start -->
+      <div id="menu">
+        <div class="opt">
+          <div class="main_opt">
+            <a href="#">About us</a>
+            <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
+          </div>
+          <div class="sub_opt">
+            <a href="#">a</a>
+            <a href="#">b</a>
+            <a href="#">c</a>
+            <a href="#">a</a>
+            <a href="#">b</a>
+            <a href="#">c</a>
+            <a href="#">a</a>
+            <a href="#">b</a>
+            <a href="#">c</a>
+          </div>
+        </div>
+
+        <div class="opt">
+          <div class="main_opt">
+            <a href="#">News</a>
+            <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
+          </div>
+          <div class="sub_opt">
+            <a href="#">a</a>
+            <a href="#">b</a>
+            <a href="#">c</a>
+          </div>
+        </div>
+
+        <div class="opt">
+          <div class="main_opt">
+            <a href="#">Journal</a>
+            <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
+          </div>
+          <div class="sub_opt">
+            <a href="#">a</a>
+            <a href="#">b</a>
+            <a href="#">c</a>
+          </div>
+        </div>
+
+        <div class="opt">
+          <div class="main_opt">
+            <a href="membership">Membership</a>
+            <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
+          </div>
+          <div class="sub_opt">
+            <a href="#">a</a>
+            <a href="#">b</a>
+            <a href="#">c</a>
+          </div>
+        </div>
+
+        <div class="opt">
+          <div class="main_opt">
+            <a href="#">Donations</a>
+            <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
+          </div>
+          <div class="sub_opt">
+            <a href="#">a</a>
+            <a href="#">b</a>
+            <a href="#">c</a>
+          </div>
+        </div>
+      </div>
+      <!--Menu End -->
     </div>
-    <!-- Menu Start -->
-    <div id="menu">
-      <div class="opt">
-        <div class="main_opt">
-          <a href="#">About us</a>
-          <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
-        </div>
-        <div class="sub_opt">
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-        </div>
-      </div>
-
-      <div class="opt">
-        <div class="main_opt">
-          <a href="#">News</a>
-          <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
-        </div>
-        <div class="sub_opt">
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-        </div>
-      </div>
-
-      <div class="opt">
-        <div class="main_opt">
-          <a href="#">Journal</a>
-          <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
-        </div>
-        <div class="sub_opt">
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-        </div>
-      </div>
-
-      <div class="opt">
-        <div class="main_opt">
-          <a href="membership">Membership</a>
-          <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
-        </div>
-        <div class="sub_opt">
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-        </div>
-      </div>
-
-      <div class="opt">
-        <div class="main_opt">
-          <a href="#">Donations</a>
-          <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
-        </div>
-        <div class="sub_opt">
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-        </div>
-      </div>
-    </div>
-    <!-- Menu End -->
   </div>
 
+
   <div id="main">
-    <h1>The Malta Mathematical Society</h1>
+
   </div>
 
   <script>
@@ -152,4 +155,5 @@
 </body>
 
 </html>
+
 </html>
