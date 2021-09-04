@@ -1,155 +1,58 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <!-- Link to font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
 
-<head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="shortcut icon" href="images/mms_logo_no_text.svg" type="image/svg" />
+    <!-- Link to MMS logo -->
+    <link rel="shortcut icon" href="images/mms_logo_no_text.svg" type="image/svg" />
 
-  <!-- Loading scripts -->
-  <script src="https://js.stripe.com/v3/"></script>
-  <script src="js/style.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
 
-  <meta name="viewport" content="width=device-width" charset="utf-8" />
-  <title>MMS - Home Page</title>
-</head>
+    <title>MMS - Home Page</title>
+  </head>
 
-<body>
-  <!-- TODO: Change to Icon openNav character -->
-  <span id="open_nav" onclick="openNav(80)">&#9776;</span>
+  <body>
+    <span id="open_nav">&#9776;</span>
 
-  <div id="side_nav">
-    <div id="nav_container">
-      <!-- TODO: Change to Icon closeNav character -->
-      <div id="close_container">
-        <span id="close_nav" onclick="closeNav()">&#8249;</span>
-      </div>
-      <img id="mms_logo" src="images/mms_logo_text.svg" onclick="document.location.href=DOMAIN" />
+    <div id="nav"></div>
+
+    <div id="content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis odio lorem, eget fermentum nunc iaculis
+        quis. Ut quis tempus dui, scelerisque sollicitudin sapien. Pellentesque in molestie nisi. Sed elementum urna
+        eget libero rhoncus cursus. Nam ut fermentum diam. Ut faucibus libero nec velit blandit pellentesque. Praesent
+        rutrum mattis finibus. Nam non dui at mi scelerisque ullamcorper. Quisque volutpat facilisis turpis, eu ornare
+        est imperdiet a. Etiam vehicula sapien sem, sodales ornare ex feugiat eget. Integer vel imperdiet urna. Cras vel
+        feugiat ex. Curabitur lacinia, massa ut sodales rhoncus, ligula sapien efficitur eros, a maximus turpis eros vel
+        libero. Ut accumsan nisi est, vitae bibendum purus efficitur vitae. Nulla tristique diam a consequat
+        consectetur. Curabitur dictum quam et dolor dictum, ac luctus augue eleifend. Morbi fringilla risus in placerat
+        elementum. Nulla egestas risus nunc, nec ultricies tortor dapibus ut. Ut sed iaculis mauris. Nam lacinia purus
+        sit amet nisl commodo varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+        turpis egestas. Donec vestibulum lacus id purus fermentum, vel porta lorem condimentum. Mauris elementum iaculis
+        ante, non pellentesque ligula aliquam at. Sed luctus feugiat odio, vitae congue neque viverra id. Sed ut auctor
+        sapien. Donec blandit maximus lectus vitae dignissim. Nullam id porttitor neque. Aliquam at nulla iaculis risus
+        posuere rutrum lacinia tempor sem. Proin scelerisque rutrum ante, nec lobortis felis elementum id. Curabitur a
+        fermentum lacus, sit amet blandit lorem. Integer vel pretium felis. Vivamus a urna eget turpis condimentum
+        fermentum at at mauris. Vestibulum non odio lacus. Maecenas commodo in eros ac malesuada. Curabitur ornare leo
+        id erat lacinia, sit amet rutrum magna interdum. Mauris maximus orci nisi, eu gravida nulla fringilla quis.
+        Aliquam sit amet blandit enim. Nulla tristique vulputate euismod. Nam sit amet tincidunt mauris. Etiam in
+        interdum ante, a fermentum sem. Praesent diam ex, pretium eget porta in, gravida eu urna. Praesent ac nibh nec
+        risus tincidunt consectetur vitae in ipsum. Praesent enim sem, maximus non lorem quis, efficitur tincidunt nisl.
+        Fusce sed egestas ipsum. Mauris dignissim purus sed ipsum lobortis cursus. Ut ullamcorper maximus lorem, eget
+        porta ante porttitor vitae. Sed ullamcorper placerat lorem, interdum maximus orci placerat et. In dignissim
+        feugiat vestibulum. Etiam semper a justo vitae placerat. Nunc dignissim nisl sem, finibus convallis nulla
+        consectetur eu. Curabitur aliquet, dolor eget euismod cursus, neque nibh euismod lectus, vitae pulvinar lacus
+        felis vel arcu. Integer luctus lacus ut nunc venenatis, eu blandit ante malesuada. Vestibulum laoreet risus in
+        neque pulvinar posuere. Nam cursus purus ex, quis consectetur ligula tempus et. In finibus varius facilisis. Ut
+        augue risus, pulvinar a mauris sit amet, feugiat dapibus tellus. Donec nibh lectus, aliquam quis massa a,
+        egestas feugiat velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+        himenaeos. Donec varius bibendum ex in consequat.
+      </p>
     </div>
-    <!-- Menu Start -->
-    <div id="menu">
-      <div class="opt">
-        <div class="main_opt">
-          <a href="#">About us</a>
-          <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
-        </div>
-        <div class="sub_opt">
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-        </div>
-      </div>
-
-      <div class="opt">
-        <div class="main_opt">
-          <a href="#">News</a>
-          <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
-        </div>
-        <div class="sub_opt">
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-        </div>
-      </div>
-
-      <div class="opt">
-        <div class="main_opt">
-          <a href="#">Journal</a>
-          <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
-        </div>
-        <div class="sub_opt">
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-        </div>
-      </div>
-
-      <div class="opt">
-        <div class="main_opt">
-          <a href="membership">Membership</a>
-          <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
-        </div>
-        <div class="sub_opt">
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-        </div>
-      </div>
-
-      <div class="opt">
-        <div class="main_opt">
-          <a href="#">Donations</a>
-          <i class="chevron" onclick="openTree(this)" data-feather="chevron-left"></i>
-        </div>
-        <div class="sub_opt">
-          <a href="#">a</a>
-          <a href="#">b</a>
-          <a href="#">c</a>
-        </div>
-      </div>
-    </div>
-    <!-- Menu End -->
-  </div>
-
-  <div id="main">
-    <h1>The Malta Mathematical Society</h1>
-  </div>
-
-  <script>
-    /* Stripe */
-
-    // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
-    var PUBLISHABLE_KEY =
-      "pk_test_51JTSirHzGyDtPLS303qlilJp25VjFeZwH0eEZTmcJgVV6XFnO0D2eOWv7t2ZAlaUUsRpjTycSMoCZYOgcRv9vZjA00KA1xNRTv";
-    // Replace with the domain you want your users to be redirected back to after payment
-    var DOMAIN = location.href.replace(/[^/]*$/, "");
-
-    var stripe = Stripe(PUBLISHABLE_KEY);
-
-    // Handle any errors from Checkout
-    var handleResult = function (result) {
-      if (result.error) {
-        var displayError = document.getElementById("error-message");
-        displayError.textContent = result.error.message;
-      }
-    };
-
-    document.querySelectorAll("button").forEach(function (button) {
-      button.addEventListener("click", function (e) {
-        var mode = e.target.dataset.checkoutMode;
-        var priceId = e.target.dataset.priceId;
-        var items = [{
-          price: priceId,
-          quantity: 1,
-        }, ];
-
-        // Make the call to Stripe.js to redirect to the checkout page
-        // with the sku or plan ID.
-        stripe
-          .redirectToCheckout({
-            mode: mode,
-            lineItems: items,
-            successUrl: DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
-            cancelUrl: DOMAIN,
-          })
-          .then(handleResult);
-      });
-    });
-
-    /* Feather */
-    feather.replace();
-  </script>
-</body>
-
-</html>
+  </body>
 </html>
