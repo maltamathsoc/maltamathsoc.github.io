@@ -23,7 +23,8 @@
     <div id="open-nav-wrapper">
       <div id="open-nav">
         <img src="images/mms_logo_text.svg" type="image/svg" />
-        <i class="material-icons" onclick="openSlideNav()">menu</i>
+        <i class="material-icons" onclick="toggle(this)">menu</i>
+        <!-- <i class="material-icons" onclick="openSlideNav()">menu</i> -->
       </div>
     </div>
 
@@ -31,7 +32,8 @@
       <div id="top-nav">
         <img src="images/mms_logo_text.svg" type="image/svg" />
         <div id="top-menu">
-          <a href="about-us.html">About Us</a>
+          <a href="#">About Us</a>
+          <a href="#">News</a>
           <a href="#">Events</a>
           <a href="#">Contact Us</a>
           <a href="#">Membership</a>
@@ -40,51 +42,13 @@
     </div>
 
     <div id="slide-nav">
-      <div id="close">
-        <i class="material-icons" onclick="closeSlideNav()">close</i>
-      </div>
-      <div id="slide-menu">
-        <a href="#">About Us</a>
-        <a href="#">Events</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Membership</a>
-        <a href="#">About Us</a>
-        <a href="#">Events</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Membership</a>
-        <a href="#">About Us</a>
-        <a href="#">Events</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Membership</a>
-        <a href="#">About Us</a>
-        <a href="#">Events</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Membership</a>
-        <a href="#">About Us</a>
-        <a href="#">Events</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Membership</a>
-        <a href="#">About Us</a>
-        <a href="#">Events</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Membership</a>
-        <a href="#">About Us</a>
-        <a href="#">Events</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Membership</a>
-        <a href="#">About Us</a>
-        <a href="#">Events</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Membership</a>
-        <a href="#">About Us</a>
-        <a href="#">Events</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Membership</a>
-        <a href="#">About Us</a>
-        <a href="#">Events</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Membership</a>
-      </div>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Membership</a></li>
+      </ul>
     </div>
 
     <div id="content">
@@ -119,7 +83,7 @@
         egestas feugiat velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
         himenaeos. Donec varius bibendum ex in consequat.
       </p>
-
+      <br />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis odio lorem, eget fermentum nunc iaculis
         quis. Ut quis tempus dui, scelerisque sollicitudin sapien. Pellentesque in molestie nisi. Sed elementum urna
@@ -157,35 +121,24 @@
       const body = document.querySelector("body");
       const slideNav = document.querySelector("#slide-nav");
 
-      function openSlideNav() {
-        body.style.overflowY = "hidden";
-        slideNav.style.height = "100%";
-      }
+      //function autoClose(listener) {
+      //  if (listener.matches) {
+      //    closeSlideNav();
+      //  }
+      //}
 
-      function closeSlideNav() {
-        body.style.overflowY = "auto";
-        slideNav.style.height = "0%";
-      }
-
-      function autoClose(listener) {
-        if (listener.matches) {
-          closeSlideNav();
+      function toggle(element) {
+        if (element.innerHTML == "menu") {
+          element.innerHTML = "close";
+          body.style.overflowY = "hidden";
+          slideNav.style.left = "0%";
+        } else {
+          element.innerHTML = "menu";
+          body.style.overflowY = "auto";
+          slideNav.style.left = "-100%";
         }
       }
-
-      window.matchMedia("(min-width: 850px)").addListener(autoClose);
-
-      /*
-      document.querySelector("#close").addEventListener("click", function () {
-        slideNav.addEventListener(
-          "transitionend",
-          function () {
-            body.style.overflowY = "auto";
-          },
-          { once: true }
-        );
-      });
-      */
+      // window.matchMedia("(min-width: calc(900px + 4 * 10px))").addListener(autoClose);
     </script>
   </body>
 </html>
