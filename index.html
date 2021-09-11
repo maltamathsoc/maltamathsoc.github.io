@@ -14,6 +14,10 @@
     <!-- Link to google icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
+    <!-- MathJax Support -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <meta name="viewport" content="width=device-width" charset="utf-8" />
 
     <title>MMS - Home Page</title>
@@ -24,7 +28,6 @@
       <div id="open-nav">
         <img src="images/mms_logo_text.svg" type="image/svg" />
         <i class="material-icons" onclick="toggle(this)">menu</i>
-        <!-- <i class="material-icons" onclick="openSlideNav()">menu</i> -->
       </div>
     </div>
 
@@ -83,7 +86,7 @@
         egestas feugiat velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
         himenaeos. Donec varius bibendum ex in consequat.
       </p>
-      <br />
+
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis odio lorem, eget fermentum nunc iaculis
         quis. Ut quis tempus dui, scelerisque sollicitudin sapien. Pellentesque in molestie nisi. Sed elementum urna
@@ -121,12 +124,6 @@
       const body = document.querySelector("body");
       const slideNav = document.querySelector("#slide-nav");
 
-      //function autoClose(listener) {
-      //  if (listener.matches) {
-      //    closeSlideNav();
-      //  }
-      //}
-
       function toggle(element) {
         if (element.innerHTML == "menu") {
           element.innerHTML = "close";
@@ -138,7 +135,6 @@
           slideNav.style.left = "-100%";
         }
       }
-      // window.matchMedia("(min-width: calc(900px + 4 * 10px))").addListener(autoClose);
     </script>
   </body>
 </html>

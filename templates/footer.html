@@ -1,0 +1,20 @@
+    </div>
+
+    <script>
+      const body = document.querySelector("body");
+      const slideNav = document.querySelector("#slide-nav");
+
+      function toggle(element) {
+        if (element.innerHTML == "menu") {
+          element.innerHTML = "close";
+          body.style.overflowY = "hidden";
+          slideNav.style.left = "0%";
+        } else {
+          element.innerHTML = "menu";
+          body.style.overflowY = "auto";
+          slideNav.style.left = "-100%";
+        }
+      }
+    </script>
+  </body>
+</html>

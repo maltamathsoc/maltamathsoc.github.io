@@ -15,7 +15,7 @@
   --nav-padding: 15px;
   --left-right-padding: 25px;
 
-  --content-padding: 10px;
+  --content-padding: 15px;
 }
 
 /* This is important because it make everything more orderly*/
@@ -34,7 +34,8 @@ body {
   width: fit-content;
   width: -moz-fit-content;
 
-  padding: var(--content-padding);
+  padding-left: var(--content-padding);
+  padding-right: var(--content-padding);
 
   border: solid;
 
@@ -43,6 +44,9 @@ body {
 
 #content p {
   margin: 0px;
+
+  padding-top: var(--content-padding);
+  padding-bottom: var(--content-padding);
 
   font-family: var(--default-font-family);
   font-size: var(--default-font-size);
@@ -126,6 +130,7 @@ body {
   position: fixed;
 
   display: flex;
+
   justify-content: space-between;
 
   top: 0;
@@ -135,6 +140,7 @@ body {
   height: var(--nav-height);
 
   padding: var(--nav-padding) var(--left-right-padding) var(--nav-padding) var(--left-right-padding);
+
   border-bottom: 1px solid;
 
   background-color: white;
