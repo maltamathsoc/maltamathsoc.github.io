@@ -36,3 +36,5 @@ x = \frac{-b \pm \sqrt{b^2 -4ac}}{2a}
 \\]
 
 This is a test for converting from Markdown (incl. MathJax) to HTML. Hopefully, I can find a stable way to do this conversion by making used of a Makefile which allows me to create this when there are multiple .md files present in directory.
+
+What we have found is that the application "markdown" provided by the package "discount" (on Archlinux) is not a good conversion tool.
