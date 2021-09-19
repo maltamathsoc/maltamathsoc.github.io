@@ -1,8 +1,6 @@
-.PHONY: all gen-articles clean init get-article-list #deploy
+.PHONY: all gen-articles clean init get-article-list
 
-all: gen-articles gen-article-list #deploy
-
-#$(notdir $(wildcard ./articles/*))
+all: gen-articles gen-article-list
 
 ARTICLES := $(notdir $(wildcard ./input-articles/*))
 

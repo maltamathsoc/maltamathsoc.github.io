@@ -164,9 +164,9 @@ body {
 
 /* End of top navigation for mobile */
 
-/* Dropdown menu for mobile */
+/* Slide menu for mobile */
 
-/*Use to be slide-nav*/
+/* Use to be slide-nav */
 #slide-nav {
   position: fixed;
 
@@ -263,12 +263,11 @@ body {
 /* Smallscreen */
 @media screen and (max-width: calc(900px + 4 * 10px - 1px)) {
   #content {
-    margin-left: var(--content-padding);
-    margin-right: var(--content-padding);
+    width: calc(100% - 2 * var(--left-right-padding));
   }
 
   #content p {
-    width: calc(100% - 2 * var(--left-right-padding));
+    overflow-x: auto;
   }
 
   /* Display settings for desktop */
