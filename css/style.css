@@ -31,9 +31,6 @@ body {
 #content {
   margin: 20px auto 20px auto;
 
-  width: fit-content;
-  width: -moz-fit-content;
-
   padding-left: var(--content-padding);
   padding-right: var(--content-padding);
 
@@ -41,6 +38,9 @@ body {
   border-radius: 15px;
 
   background-color: #ffffff;
+
+  font-family: var(--default-font-family);
+  font-size: var(--default-font-size);
 }
 
 #content p {
@@ -48,9 +48,20 @@ body {
 
   padding-top: var(--content-padding);
   padding-bottom: var(--content-padding);
+}
 
-  font-family: var(--default-font-family);
-  font-size: var(--default-font-size);
+#content ul {
+  margin: 0px;
+
+  padding-top: var(--content-padding);
+  padding-bottom: var(--content-padding);
+}
+
+#content img {
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* End of configuration for content */
@@ -101,7 +112,7 @@ body {
   font-family: var(--default-font-family);
   font-size: var(--small-font-size);
 
-  padding-left: 30px;
+  margin-left: 30px;
 
   text-decoration: none;
 
@@ -223,7 +234,7 @@ body {
 
 /* Widescreen */
 @media screen and (min-width: calc(900px + 4 * 10px)) {
-  #content p {
+  #content {
     width: 900px;
   }
 
@@ -263,7 +274,7 @@ body {
 /* Smallscreen */
 @media screen and (max-width: calc(900px + 4 * 10px - 1px)) {
   #content {
-    width: calc(100% - 2 * var(--left-right-padding));
+    width: calc(100% - 4 * var(--content-padding));
   }
 
   #content p {
