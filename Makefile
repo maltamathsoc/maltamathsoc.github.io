@@ -10,12 +10,7 @@ gen-article-list:
 
 gen-articles: init
 	@echo "Generating articles..."
-	@for dir in ${ARTICLES}; do \
-		rsync -r "./input-articles/$$dir" "./articles/" --exclude="article.md"; \
-		cat "./templates/article-header.html" > "./articles/$$dir/article.html"; \
-		cmark --unsafe "./input-articles/$$dir/article.md" >> "./articles/$$dir/article.html"; \
-		cat "./templates/article-footer.html" >> "./articles/$$dir/article.html"; \
-	done;
+	$(shell ./gen-articles.sh)
 
 init: clean
 	mkdir "./articles"
