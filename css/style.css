@@ -6,7 +6,7 @@
 
   /* Default Font Family & Size */
   --default-font-family: "Lato", sans-serif;
-  --default-font-size: 24px;
+  --default-font-size: 20px;
   --large-font-size: 36px;
 
   --small-font-size: 18px;
@@ -28,17 +28,18 @@ body {
 
 /* Configuration for content */
 
-#content {
+#content-wrapper {
   margin: 20px auto 20px auto;
-
-  padding-left: var(--content-padding);
-  padding-right: var(--content-padding);
 
   border: solid;
   border-radius: 15px;
 
   background-color: #ffffff;
+}
 
+#content {
+  padding: var(--content-padding);
+  
   font-family: var(--default-font-family);
   font-size: var(--default-font-size);
 }
@@ -46,8 +47,8 @@ body {
 #content p {
   margin: 0px;
 
-  padding-top: var(--content-padding);
-  padding-bottom: var(--content-padding);
+  /* padding-top: var(--content-padding); */
+  /* padding-bottom: var(--content-padding); */
 }
 
 #content ul {
@@ -236,7 +237,7 @@ body {
 
 /* Widescreen */
 @media screen and (min-width: calc(900px + 4 * 10px)) {
-  #content {
+  #content-wrapper {
     width: 900px;
   }
 
@@ -275,13 +276,13 @@ body {
 
 /* Smallscreen */
 @media screen and (max-width: calc(900px + 4 * 10px - 1px)) {
-  #content {
+  #content-wrapper {
     width: calc(100% - 4 * var(--content-padding));
   }
 
-  #content p {
-    overflow-x: auto;
-  }
+  /* #content p { */
+  /*   overflow-x: auto; */
+  /* } */
 
   /* Display settings for desktop */
 

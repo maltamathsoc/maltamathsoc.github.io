@@ -1,0 +1,10 @@
+
+/* Widescreen */
+@media screen and (min-width: calc(900px + 4 * 10px)) {
+
+}
+
+/* Smallscreen */
+@media screen and (max-width: calc(900px + 4 * 10px - 1px)) {
+
+}
