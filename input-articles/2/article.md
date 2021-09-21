@@ -43,7 +43,7 @@ What we have found is that the application "markdown" provided by the package "d
 
 This should be a table
 
-|I am |You are |
-|-----|--------|
-|blala|lalebaoj|
+|I am             |You are                |
+|-----------------|-----------------------|
+|blala            |lalebaoj               |
 |this is the thing|this is the other thing|
