@@ -19,7 +19,7 @@ for DIR in $ARTICLES; do
 		</div>
 		<hr>" >>./articles/$DIR/article.html
 
-    markdown ./input-articles/$DIR/article.md >>./articles/$DIR/article.html
+    markdown -f +fencedcode ./input-articles/$DIR/article.md >>./articles/$DIR/article.html
 
     cat ./templates/article-footer.html >>./articles/$DIR/article.html
 done

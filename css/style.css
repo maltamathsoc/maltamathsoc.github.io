@@ -44,13 +44,6 @@ body {
   font-size: var(--default-font-size);
 }
 
-#content p {
-  margin: 0px;
-
-  /* padding-top: var(--content-padding); */
-  /* padding-bottom: var(--content-padding); */
-}
-
 #content ul {
   margin: 0px;
 
