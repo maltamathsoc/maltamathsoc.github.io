@@ -15,13 +15,15 @@ for DIR in $ARTICLES; do
 
     if [ $COUNT -lt $LENGTH ]; then
         echo "<div class='article'>
-			<p class='title-date'><span class='title'><a href='./articles/$DIR/article.html'>$TITLE</a></span><span class='date'>$DATE</span></p>
+			<p class='title'><a href='./articles/$DIR/article.html'>$TITLE</a></p>
+			<p class='date'>$DATE</p>
 			<p class='author'>$AUTHOR</p>
-			<hr>
-		</div>" >>./article-list.html
+			</div>
+		<hr>" >>./article-list.html
     else
         echo "<div class='article'>
-			<p class='title-date'><span class='title'><a href='./articles/$DIR/article.html'>$TITLE</a></span><span class='date'>$DATE</span></p>
+			<p class='title'><a href='./articles/$DIR/article.html'>$TITLE</a></p>
+			<p class='date'>$DATE</p>
 			<p class='author'>$AUTHOR</p>
 		</div>" >>./article-list.html
     fi

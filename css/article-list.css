@@ -1,8 +1,8 @@
 /* Article List Specific CSS */
 
-.article p {
-  display: flex;
-  justify-content: space-between;
+.title {
+  font-size: 1.25em;
+  font-weight: bold;
 }
 
 .date {
@@ -12,14 +12,14 @@
 }
 
 .title-date {
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
 }
 
 .author {
-  padding-top: 5px;
+  /* padding-top: 5px; */
 }
 
-hr {
-  border-color: 1px solid #eeeeee;
+#content hr {
+  border: 1px solid #eeeeee;
   border-radius: 5px;
 }
