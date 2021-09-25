@@ -1,30 +1,41 @@
 #content p {
-  padding-top: var(--content-padding);
-  padding-bottom: var(--content-padding);
+  margin-block-start: 0.125rem;
+  margin-block-end: 1rem;
+
+  line-height: 1.25rem;
+
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #content code {
   font-family: monospace;
   font-size: 90%;
-  padding-top: 1px;
-  padding-left: 2px;
-  padding-right: 2px;
-  border-radius: 5px;
+
+  padding: 5px 3px 5px 3px;
+
+  border-radius: 3px;
+
   background-color: #eeeeee;
 }
 
 #content pre {
-  padding: 5px;
-  border: 1px solid #aaaaaa;
+  padding: 5px 3px 5px 3px;
+
+  /* border: 1px solid #aaaaaa; */
   border-radius: 5px;
+
+  box-shadow: 5px 5px 5px lightgrey;
+
   background-color: #eeeeee;
 }
 
 #content pre code {
   font-family: monospace;
   font-size: 90%;
-  border-radius: 0px;
-  padding: 5px 2px 5px 2px;
+
+  padding: 5px 3px 5px 3px;
+
   background-color: transparent;
 }
 
@@ -34,10 +45,89 @@
 }
 
 #content blockquote {
-  background-color: #f5f5f5;
   border-left: 10px solid #cccccc;
+  border-radius: 5px;
+
   padding-left: 20px;
-  border-radius: 10px;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  margin-left: 0px;
+  margin-right: 0px;
+
+  background-color: #f5f5f5;
+}
+
+#content .footnotes {
+  font-size: 80%;
+}
+
+#content .footnotes p {
+  padding: 0px;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#content .footnotes a {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#content dt {
+  font-weight: bold;
+}
+
+#content table {
+  max-width: 100%;
+
+  border-collapse: collapse;
+  border: 1px solid #cccccc;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 1rem;
+}
+
+#content table thead tr {
+  background-color: #fbfbfb;
+
+  border-bottom: 5px solid #cccccc;
+}
+
+#content table thead tr th {
+  padding: 10px;
+}
+
+#content table tbody tr {
+  background-color: #f5f5f5;
+}
+
+#content table tbody tr td {
+  padding: 10px;
+}
+
+#content table tbody tr:nth-child(even) {
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+
+  background-color: #f9f9f9;
+}
+
+#content img {
+  display: block;
+
+  max-width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content ul,
+#content ol {
+  line-height: 1.5rem;
 }
 
 /* Widescreen */

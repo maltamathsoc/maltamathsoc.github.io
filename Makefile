@@ -1,14 +1,20 @@
-.PHONY: all gen-articles clean init get-article-list
+.PHONY: deploy all gen-articles clean init get-article-list build
 
-all: gen-articles gen-article-list
+all: build deploy
+
+build: gen-articles gen-article-list
+
+deploy:
+	@echo "Deploying website..."
+	@./deploy.sh
 
 gen-article-list:
 	@echo "Generating article list..."
-	$(shell ./gen-article-list.sh)
+	@./gen-article-list.sh
 
 gen-articles: init
 	@echo "Generating articles..."
-	$(shell ./gen-articles.sh)
+	@./gen-articles.sh
 
 init: clean
 	@echo "Init..."

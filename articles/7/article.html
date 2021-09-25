@@ -86,9 +86,7 @@ i18n with plurals support and easy syntax.</li>
 </ul>
 
 
-<p>You will like those projects!</p>
-
-<hr />
+<h2>You will like those projects!</h2>
 
 <h1>h1 Heading 8-)</h1>
 
@@ -118,7 +116,7 @@ i18n with plurals support and easy syntax.</li>
 
 <p>test.. test&hellip; test&hellip;.. test?&hellip;.. test!&hellip;.</p>
 
-<p>!!!!!! ???? ,,  &ndash; &mdash;</p>
+<p>!!! ??? , &ndash; &mdash;</p>
 
 <p>&ldquo;Smartypants, double quotes&rdquo; and &lsquo;single quotes&rsquo;</p>
 
@@ -161,7 +159,16 @@ i18n with plurals support and easy syntax.</li>
 </li>
 </ul>
 </li>
-<li>Very easy!</li>
+<li><p>Very easy!</p></li>
+<li><p>Create list:</p>
+
+<ul>
+<li>This is part of the list</li>
+<li>This is also part of the list</li>
+<li>This is also part of the list</li>
+<li>This is also part of the list</li>
+</ul>
+</li>
 </ul>
 
 
@@ -170,8 +177,8 @@ i18n with plurals support and easy syntax.</li>
 <ol>
 <li>Lorem ipsum dolor sit amet</li>
 <li>Consectetur adipiscing elit</li>
-<li><p>Integer molestie lorem at massa</p></li>
-<li><p>You can use sequential numbers&hellip;</p></li>
+<li>Integer molestie lorem at massa</li>
+<li>You can use sequential numbers&hellip;</li>
 <li>&hellip;or keep all the numbers as <code>1.</code></li>
 </ol>
 
@@ -183,6 +190,10 @@ i18n with plurals support and easy syntax.</li>
 <li>bar</li>
 </ol>
 
+
+<p>You cannot start with an order list with an offset,
+it will always start from 1. Let us see if we can
+find a rule for this is the markdown flags.</p>
 
 <h2>Code</h2>
 
@@ -206,8 +217,17 @@ line 3 of code
 <pre><code class="js">var foo = function (bar) {
   return bar++;
 };
-// This will be the longest comment I will ever write in my life I'm telling you it is definitely the longest. 
+// This will be the longest comment I will ever write in my life I'm telling you it is definitely the longest.
 console.log(foo(5));
+</code></pre>
+
+
+
+<pre><code class="c">void
+main(int argc, char **argv)
+{
+  return 0;
+}
 </code></pre>
 
 <h2>Tables</h2>
@@ -216,7 +236,7 @@ console.log(foo(5));
 <thead>
 <tr>
 <th> Option </th>
-<th> Description </th>
+<th> Description                                                               </th>
 </tr>
 </thead>
 <tbody>
@@ -226,11 +246,11 @@ console.log(foo(5));
 </tr>
 <tr>
 <td> engine </td>
-<td> engine to be used for processing templates. Handlebars is the default. </td>
+<td> engine to be used for processing templates. Handlebars is the default.    </td>
 </tr>
 <tr>
 <td> ext    </td>
-<td> extension to be used for dest files. </td>
+<td> extension to be used for dest files.                                      </td>
 </tr>
 </tbody>
 </table>
@@ -242,21 +262,21 @@ console.log(foo(5));
 <thead>
 <tr>
 <th style="text-align:right;"> Option </th>
-<th style="text-align:right;"> Description </th>
+<th style="text-align:right;">                                                               Description </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:right;"> data   </td>
+<td style="text-align:right;">   data </td>
 <td style="text-align:right;"> path to data files to supply the data that will be passed into templates. </td>
 </tr>
 <tr>
 <td style="text-align:right;"> engine </td>
-<td style="text-align:right;"> engine to be used for processing templates. Handlebars is the default. </td>
+<td style="text-align:right;">    engine to be used for processing templates. Handlebars is the default. </td>
 </tr>
 <tr>
-<td style="text-align:right;"> ext    </td>
-<td style="text-align:right;"> extension to be used for dest files. </td>
+<td style="text-align:right;">    ext </td>
+<td style="text-align:right;">                                      extension to be used for dest files. </td>
 </tr>
 </tbody>
 </table>
@@ -283,70 +303,46 @@ console.log(foo(5));
 
 <h2>Plugins</h2>
 
-<p>The killer feature of <code>markdown-it</code> is very effective support of
-<a href="https://www.npmjs.org/browse/keyword/markdown-it-plugin">syntax plugins</a>.</p>
+<p>The killer feature of <code>markdown-it</code> is very effective support of</p>
 
-<h3><a href="https://github.com/markdown-it/markdown-it-emoji">Emojies</a></h3>
-
-<blockquote><p>Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:</p>
-
-<p>Shortcuts (emoticons): :-) :-( 8-) ;)</p></blockquote>
-
-<p>see <a href="https://github.com/markdown-it/markdown-it-emoji#change-output">how to change output</a> with twemoji.</p>
-
-<h3><a href="https://github.com/markdown-it/markdown-it-sub">Subscript</a> / <a href="https://github.com/markdown-it/markdown-it-sup">Superscript</a></h3>
+<h2>Superscript</h2>
 
 <ul>
-<li>19<sup>th</sup>^</li>
-<li>H~2~O</li>
+<li>19<sup>th</sup></li>
 </ul>
 
 
-<h3><a href="https://github.com/markdown-it/markdown-it-ins">\<ins></a></h3>
+<h3>Footnotes</h3>
 
-<p>++Inserted text++</p>
+<p>Footnote 1 link<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
 
-<h3><a href="https://github.com/markdown-it/markdown-it-mark">\<mark></a></h3>
+<p>Footnote 2 link<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</p>
 
-<p>==Marked text==</p>
-
-<h3><a href="https://github.com/markdown-it/markdown-it-footnote">Footnotes</a></h3>
-
-<p>Footnote 1 link<a href="Footnote">^first</a>.</p>
-
-<p>Footnote 2 link<a href="Footnote">^second</a>.</p>
-
-<p>Inline footnote^[Text of inline footnote] definition.</p>
-
-<p>Duplicated footnote reference<a href="Footnote">^second</a>.</p>
-
-<pre><code>and multiple paragraphs.
-</code></pre>
+<p>Duplicated footnote reference[^second].</p>
 
 <h3><a href="https://github.com/markdown-it/markdown-it-deflist">Definition lists</a></h3>
 
-<p>Term 1</p>
+<dl>
+<dt>Term 1</dt>
+<dd><p>Definition 1
+with lazy continuation.</p></dd>
+<dt>Term 2 with <em>inline markup</em></dt>
+<dd><p>Definition 2</p>
 
-<p>:   Definition 1
-with lazy continuation.</p>
-
-<p>Term 2 with <em>inline markup</em></p>
-
-<p>:   Definition 2</p>
-
-<pre><code>    { some code, part of Definition 2 }
-
-Third paragraph of definition 2.
+<pre><code>  { some code, part of Definition 2 }
 </code></pre>
+
+<p>  Third paragraph of definition 2.</p></dd>
+</dl>
 
 <p><em>Compact style:</em></p>
 
 <p>Term 1
-  ~ Definition 1</p>
+~ Definition 1</p>
 
 <p>Term 2
-  ~ Definition 2a
-  ~ Definition 2b</p>
+~ Definition 2a
+~ Definition 2b</p>
 
 <h3><a href="https://github.com/markdown-it/markdown-it-abbr">Abbreviations</a></h3>
 
@@ -361,6 +357,18 @@ Third paragraph of definition 2.
 <p>::: warning
 <em>here be dragons</em>
 :::</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Footnote <strong>can have markup</strong></p>
+
+<p>and multiple paragraphs.</p><a href="#fnref:1" rev="footnote">&#8617;</a></li>
+<li id="fn:2">
+Footnote text.<a href="#fnref:2" rev="footnote">&#8617;</a></li>
+</ol>
+</div>
+
       </div>
     </div>
 
