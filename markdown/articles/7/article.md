@@ -1,9 +1,10 @@
 ---
+
 __Advertisement :)__
 
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
+- __[pica](https://nodeca.github.io/pica/demo/)__ \- high quality and fast image
 resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
+- __[babelfish](https://github.com/nodeca/babelfish/)__ \- developer friendly
 i18n with plurals support and easy syntax.
 
 You will like those projects!
@@ -38,6 +39,8 @@ Enable typographer option to see result.
 test.. test... test..... test?..... test!....
 
 !!! ??? , -- ---
+
+We should be using \-\- to make use of a dash like -- instead of \-
 
 "Smartypants, double quotes" and 'single quotes'
 
@@ -134,7 +137,7 @@ main(int argc, char **argv)
 ## Tables
 
 | Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
+| :----- | :------------------------------------------------------------------------ |
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default.    |
 | ext    | extension to be used for dest files.                                      |
@@ -174,7 +177,8 @@ The killer feature of `markdown-it` is very effective support of
 
 ## Superscript
 
-- 19^th
+- 19^th^
+- H~2~0
 
 ### Footnotes
 
@@ -183,6 +187,8 @@ Footnote 1 link[^first].
 Footnote 2 link[^second].
 
 Duplicated footnote reference[^second].
+
+You have a footnote refering to more than one reference.
 
 [^first]: Footnote **can have markup**
 
@@ -214,6 +220,10 @@ Term 2
 ~ Definition 2a
 ~ Definition 2b
 
+This is a compact way of writing definitions meaning they actually take up
+less space with regards to the number of spaces they need from the left
+margin of the page.
+
 ### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
 
 This is HTML abbreviation example.
@@ -222,10 +232,18 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
 \*[HTML]: Hyper Text Markup Language
 
+This really does not work and it is very pointless in my opinion it is really not
+going to improve the lives of the writers.
+
 ### [Custom containers](https://github.com/markdown-it/markdown-it-container)
 
 ::: warning
-_here be dragons_
+I ended up removing what was written here because I
+ended up pressing undo when I was trying to do something
+else. Poof.
+
+But again as I was saying, this feature will be very useful in
+making custom properties which the writers can access.
 :::
 
 \\[

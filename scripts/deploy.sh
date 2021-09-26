@@ -1,7 +1,11 @@
 #!/bin/sh
 
-if [ -f ./user-server ]; then
-    SERVER=$(cat ./user-server)
+ROOT="."
+
+CONFIG="$ROOT/config"
+
+if [ -f "$CONFIG/user-server" ]; then
+    SERVER=$(cat "$CONFIG/user-server")
 else
     OPT="n"
 
@@ -23,8 +27,8 @@ else
 
 fi
 
-if [ -f ./dest ]; then
-    DEST=$(cat ./dest)
+if [ -f "$CONFIG/dest" ]; then
+    DEST=$(cat "$CONFIG/dest")
 else
     OPT="n"
 

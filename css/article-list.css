@@ -1,25 +1,40 @@
 /* Article List Specific CSS */
 
 .title {
-  font-size: 1.25em;
-  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .date {
-  font-size: 16px;
-
+  font-size: var(--default-font-size);
   color: #999999;
-}
 
-.title-date {
-  /* padding-bottom: 5px; */
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .author {
-  /* padding-top: 5px; */
+  font-size: var(--default-font-size);
+  color: #999999;
+
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.description p {
+  line-height: 1.4;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.read-more {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #content hr {
+  background-color: #eeeeee;
   border: 1px solid #eeeeee;
   border-radius: 5px;
 }

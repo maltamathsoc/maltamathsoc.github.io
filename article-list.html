@@ -10,10 +10,17 @@
     <link rel="stylesheet" href="css/article-list.css" />
 
     <!-- Link to MMS logo -->
-    <link rel="shortcut icon" href="images/mms_logo_no_text.svg" type="image/svg" />
+    <link rel="shortcut icon" href="global-images/mms_logo_no_text.svg" type="image/svg" />
 
     <!-- Link to google icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="../../../plugins/highlight/styles/atom-one-light.min.css" />
+    <script src="../../../plugins/highlight/highlight.min.js">
+      hljs.configure({ languages: [] }); // Disbale Language Detection
+      hljs.highlightAll();
+    </script>
 
     <!-- MathJax Support -->
     <script
@@ -23,20 +30,20 @@
     ></script>
     <meta name="viewport" content="width=device-width" charset="utf-8" />
 
-    <title>MMS - Home Page</title>
+    <title>MMS - Article List</title>
   </head>
 
   <body>
     <div id="open-nav-wrapper">
       <div id="open-nav">
-        <img src="images/mms_logo_text.svg" type="image/svg" />
+        <img src="global-images/mms_logo_text.svg" type="image/svg" />
         <i class="material-icons" onclick="toggle(this)">menu</i>
       </div>
     </div>
 
     <div id="top-nav-wrapper">
       <div id="top-nav">
-        <img src="images/mms_logo_text.svg" type="image/svg" />
+        <img src="global-images/mms_logo_text.svg" type="image/svg" />
         <div id="top-menu">
           <a href="index.html">About Us</a>
           <a href="#">News</a>
@@ -53,7 +60,7 @@
         <li><a href="index.html">About Us</a></li>
         <li><a href="#">News</a></li>
         <li><a href="#">Events</a></li>
-        <li><a href="#">Articles</a></li>
+        <li><a href="article-list.html">Articles</a></li>
         <li><a href="#">Contact Us</a></li>
         <li><a href="#">Membership</a></li>
       </ul>
@@ -62,39 +69,64 @@
       <div id="content">
         <h1>List of Articles</h1>
 <div class='article'>
-			<p class='title-date'><span class='title'><a href='./articles/1/article.html'>What is quantum?</a></span><span class='date'>17th November 2019</span></p>
-			<p class='author'>Jake Xuereb</p>
+			<h2 class='title'><a href='./html/articles/8/article.html'>Myth debunked: What is 0.999...?</a></h2>
+			<p class='date'>10th February 2019</p>
+			<p class='author'>Xandru Mifsud</p>
+<div class="description">
+<p>The Latin term ad infinitum translates to ‘to infinity’, which is commonly used for sequences of numbers or summations that never end. Attempting to understand infinity can be quite a perplexing task. To illustrate this, we pose the following question: what is \(0.999\ldots\), where \(9\) repeats infinitely many times? Note that \(0.999\ldots\) is the infinite sum \(0.9 + 0.09 + 0.009 +\cdots\)</p>
+</div>
+<p class='read-more'>
+				<a href='./html/articles/8/article.html'>Read More...</a>
+				</p>
+</div>
 			<hr>
-		</div>
 <div class='article'>
-			<p class='title-date'><span class='title'><a href='./articles/2/article.html'>What is quantum?</a></span><span class='date'>17th November 2019</span></p>
-			<p class='author'>Jake Xuereb</p>
-			<hr>
-		</div>
-<div class='article'>
-			<p class='title-date'><span class='title'><a href='./articles/3/article.html'>What is quantum?</a></span><span class='date'>17th November 2019</span></p>
-			<p class='author'>Jake Xuereb</p>
-			<hr>
-		</div>
-<div class='article'>
-			<p class='title-date'><span class='title'><a href='./articles/4/article.html'>What is quantum?</a></span><span class='date'>17th November 2019</span></p>
-			<p class='author'>Jake Xuereb</p>
-			<hr>
-		</div>
-<div class='article'>
-			<p class='title-date'><span class='title'><a href='./articles/5/article.html'>What is quantum?</a></span><span class='date'>17th November 2019</span></p>
-			<p class='author'>Jake Xuereb</p>
-			<hr>
-		</div>
-<div class='article'>
-			<p class='title-date'><span class='title'><a href='./articles/6/article.html'>What is quantum?</a></span><span class='date'>17th November 2019</span></p>
-			<p class='author'>Jake Xuereb</p>
-			<hr>
-		</div>
-<div class='article'>
-			<p class='title-date'><span class='title'><a href='./articles/7/article.html'>A Markdown file with all possible things</a></span><span class='date'>21st September 2021</span></p>
+			<h2 class='title'><a href='./html/articles/7/article.html'>A Markdown file with all possible things</a></h2>
+			<p class='date'>21st September 2021</p>
 			<p class='author'>Juan Scerri</p>
-		</div>
+<div class="description">
+<p>This article is a test article in which we make use of all the possible things which can be described by Markdown to ensure that translation from a Markdown file to an HTML file happens a smoothly as possible.</p>
+</div>
+<p class='read-more'>
+				<a href='./html/articles/7/article.html'>Read More...</a>
+				</p>
+</div>
+			<hr>
+<div class='article'>
+			<h2 class='title'><a href='./html/articles/6/article.html'>What is quantum?</a></h2>
+			<p class='date'>17th November 2019</p>
+			<p class='author'>Jake Xuereb</p>
+</div>
+			<hr>
+<div class='article'>
+			<h2 class='title'><a href='./html/articles/5/article.html'>What is quantum?</a></h2>
+			<p class='date'>17th November 2019</p>
+			<p class='author'>Jake Xuereb</p>
+</div>
+			<hr>
+<div class='article'>
+			<h2 class='title'><a href='./html/articles/4/article.html'>What is quantum?</a></h2>
+			<p class='date'>17th November 2019</p>
+			<p class='author'>Jake Xuereb</p>
+</div>
+			<hr>
+<div class='article'>
+			<h2 class='title'><a href='./html/articles/3/article.html'>What is quantum?</a></h2>
+			<p class='date'>17th November 2019</p>
+			<p class='author'>Jake Xuereb</p>
+</div>
+			<hr>
+<div class='article'>
+			<h2 class='title'><a href='./html/articles/2/article.html'>What is quantum?</a></h2>
+			<p class='date'>17th November 2019</p>
+			<p class='author'>Jake Xuereb</p>
+</div>
+			<hr>
+<div class='article'>
+			<h2 class='title'><a href='./html/articles/1/article.html'>What is quantum?</a></h2>
+			<p class='date'>17th November 2019</p>
+			<p class='author'>Jake Xuereb</p>
+</div>
       </div>
     </div>
 

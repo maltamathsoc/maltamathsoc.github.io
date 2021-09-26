@@ -6,15 +6,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
 
     <!-- Link to MMS logo -->
-    <link rel="shortcut icon" href="../../images/mms_logo_no_text.svg" type="image/svg" />
+    <link rel="shortcut icon" href="../../../global-images/mms_logo_no_text.svg" type="image/svg" />
 
     <!-- Link to google icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
     <!-- Syntax Highlighting -->
-    <link rel="stylesheet" href="../../highlight/styles/atom-one-light.min.css" />
-    <script src="../../highlight/highlight.min.js"></script>
-    <script>
+    <link rel="stylesheet" href="../../../plugins/highlight/styles/atom-one-light.min.css" />
+    <script src="../../../plugins/highlight/highlight.min.js">
       hljs.configure({ languages: [] }); // Disbale Language Detection
       hljs.highlightAll();
     </script>
@@ -28,28 +27,28 @@
     <meta name="viewport" content="width=device-width" charset="utf-8" />
 
     <!-- Link to website CSS -->
-    <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <link rel="stylesheet" href="../../../css/article.css" />
 
-    <title>MMS - Home Page</title>
+    <title>MMS - Article</title>
   </head>
 
   <body>
     <div id="open-nav-wrapper">
       <div id="open-nav">
-        <img src="../../images/mms_logo_text.svg" type="image/svg" />
+        <img src="../../../global-images/mms_logo_text.svg" type="image/svg" />
         <i class="material-icons" onclick="toggle(this)">menu</i>
       </div>
     </div>
 
     <div id="top-nav-wrapper">
       <div id="top-nav">
-        <img src="../../images/mms_logo_text.svg" type="image/svg" />
+        <img src="../../../global-images/mms_logo_text.svg" type="image/svg" />
         <div id="top-menu">
-          <a href="../../index.html">About Us</a>
+          <a href="../../../index.html">About Us</a>
           <a href="#">News</a>
           <a href="#">Events</a>
-          <a href="../../article-list.html">Articles</a>
+          <a href="../../../article-list.html">Articles</a>
           <a href="#">Contact Us</a>
           <a href="#">Membership</a>
         </div>
@@ -58,10 +57,10 @@
 
     <div id="slide-nav">
       <ul>
-        <li><a href="../../index.html">About Us</a></li>
+        <li><a href="../../../index.html">About Us</a></li>
         <li><a href="#">News</a></li>
         <li><a href="#">Events</a></li>
-        <li><a href="../../article-list.html">Articles</a></li>
+        <li><a href="../../../article-list.html">Articles</a></li>
         <li><a href="#">Contact Us</a></li>
         <li><a href="#">Membership</a></li>
       </ul>
@@ -71,73 +70,41 @@
       <div id="content">
 <div id='title'>
 			<h1>What is quantum?</h1>
-			<h4>Jake Xuereb | 17th November 2019</h4>
+			<h4 class='author-date'>Jake Xuereb - 17th November 2019</h4>
 		</div>
 		<hr>
-<h1>Mathematics</h1>
-
-<p>\[
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-\]</p>
-
-<p>The above equation is the quadratic formula which allows you to solve polynomials of the following form \( ax^2 + bx + c = 0 \). The following is a derivation of the
-above result:</p>
-
-<p>\[
-ax^2 + bx + c = 0
-\]</p>
-
-<p>\[
-x^2 + \frac{b}{a}x + \frac{c}{a} = 0
-\]</p>
-
-<p>\[
-x^2 + \frac{b}{a}x = -\frac{c}{a}
-\]</p>
-
-<p>\[
-x^2 + \frac{b}{a}x + (\frac{b}{2a})^2 = \frac{b^2}{4a^2} - \frac{c}{a}
-\]</p>
-
-<p>\[
-(x + \frac{b}{2a})^2 = \frac{b^2 - 4ac}{4a^2}
-\]</p>
-
-<p>\[
-x + \frac{b}{2a} = \pm \frac{\sqrt{b^2 - 4ac}}{2a}
-\]</p>
-
-<p>\[
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-\]</p>
-
-<p>This is a test for converting from Markdown (incl. MathJax) to HTML. Hopefully, I can find a stable way to do this conversion by making used of a Makefile which allows me to create this when there are multiple .md files present in directory.</p>
-
-<p>What we have found is that the application &ldquo;markdown&rdquo; provided by the package &ldquo;discount&rdquo; (on Archlinux) is not a good conversion tool.</p>
-
-<p><img src="images/ArchLogo.png" alt="" /></p>
-
+<h1 id="mathematics">Mathematics</h1>
+<p>\[ x =  \]</p>
+<p>The above equation is the quadratic formula which allows you to solve polynomials of the following form \( ax^2 + bx + c = 0 \). The following is a derivation of the above result:</p>
+<p>\[ ax^2 + bx + c = 0 \]</p>
+<p>\[ x^2 + x +  = 0 \]</p>
+<p>\[ x^2 + x = - \]</p>
+<p>\[ x^2 + x + ()^2 =  -  \]</p>
+<p>\[ (x + )^2 =  \]</p>
+<p>\[ x +  =  \]</p>
+<p>\[ x =  \]</p>
+<p>This is a test for converting from Markdown (incl. MathJax) to HTML. Hopefully, I can find a stable way to do this conversion by making used of a Makefile which allows me to create this when there are multiple .md files present in directory.</p>
+<p>What we have found is that the application “markdown” provided by the package “discount” (on Archlinux) is not a good conversion tool.</p>
+<p><img src="images/ArchLogo.png" /></p>
 <p>This should be a table</p>
-
 <table>
 <thead>
-<tr>
-<th>I am             </th>
-<th>You are                </th>
+<tr class="header">
+<th>I am</th>
+<th>You are</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>blala            </td>
-<td>lalebaoj               </td>
+<tr class="odd">
+<td>blala</td>
+<td>lalebaoj</td>
 </tr>
-<tr>
+<tr class="even">
 <td>this is the thing</td>
 <td>this is the other thing</td>
 </tr>
 </tbody>
 </table>
-
       </div>
     </div>
 

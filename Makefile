@@ -6,20 +6,20 @@ build: gen-articles gen-article-list
 
 deploy:
 	@echo "Deploying website..."
-	@./deploy.sh
+	@./scripts/deploy.sh
 
 gen-article-list:
 	@echo "Generating article list..."
-	@./gen-article-list.sh
+	@./scripts/gen-article-list.sh
 
 gen-articles: init
 	@echo "Generating articles..."
-	@./gen-articles.sh
+	@./scripts/gen-articles.sh
 
 init: clean
 	@echo "Init..."
-	mkdir "./articles"
+	mkdir "./html/articles"
 
 clean:
 	@echo "Cleaning"
-	rm -rf "./articles"
+	rm -rf "./html/articles"
