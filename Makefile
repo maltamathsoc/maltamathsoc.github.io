@@ -1,8 +1,10 @@
-.PHONY: deploy all gen-articles clean init get-article-list build
+.PHONY: all clean init deploy build rebuild gen-articles regen-articles get-article-list
 
-all: build deploy
+all: rebuild build deploy
 
 build: gen-articles gen-article-list
+
+rebuild: regen-articles gen-article-list
 
 deploy:
 	@echo "Deploying website..."
@@ -13,8 +15,12 @@ gen-article-list:
 	@./scripts/gen-article-list.sh
 
 gen-articles: init
-	@echo "Generating articles..."
+	@echo "Generating new articles..."
 	@./scripts/gen-articles.sh
+
+regen-articles: init
+	@echo "Generating old articles..."
+	@./scripts/regen-articles.sh
 
 init: clean
 	@echo "Init..."

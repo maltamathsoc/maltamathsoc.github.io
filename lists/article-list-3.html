@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- Link to font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+
+    <!-- Link to website CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/article-list.css" />
+
+    <!-- Link to MMS logo -->
+    <link rel="shortcut icon" href="../global-images/mms_logo_no_text.svg" type="image/svg" />
+
+    <!-- Link to google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="../plugins/highlight/styles/atom-one-light.min.css" />
+    <script src="../plugins/highlight/highlight.min.js"></script>
+
+    <script>
+      hljs.configure({ languages: [] }); // Disbale Language Detection
+      hljs.highlightAll();
+    </script>
+
+    <!-- MathJax Support -->
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+
+    <title>MMS - Article List</title>
+  </head>
+
+  <body>
+    <div id="open-nav-wrapper">
+      <div id="open-nav">
+        <img src="../global-images/mms_logo_text.svg" type="image/svg" />
+        <i class="material-icons" onclick="toggle(this)">menu</i>
+      </div>
+    </div>
+
+    <div id="top-nav-wrapper">
+      <div id="top-nav">
+        <img src="../global-images/mms_logo_text.svg" type="image/svg" />
+        <div id="top-menu">
+          <a href="../index.html">About Us</a>
+          <a href="#">News</a>
+          <a href="#">Events</a>
+          <a href="./article-list-1.html">Articles</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Membership</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="slide-nav">
+      <ul>
+        <li><a href="../index.html">About Us</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="./article-list-1.html">Articles</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Membership</a></li>
+      </ul>
+    </div>
+    <div id="content-wrapper">
+      <div id="content">
+        <h1>List of Articles</h1>
+<div class='article'>
+			<h2 class='title'><a href='./../html/articles/3/article.html'>What is quantum?</a></h2>
+			<p class='date'>17th November 2019</p>
+			<p class='author'>Jake Xuereb</p>
+</div>
+			<hr>
+<div class='article'>
+			<h2 class='title'><a href='./../html/articles/2/article.html'>What is quantum?</a></h2>
+			<p class='date'>17th November 2019</p>
+			<p class='author'>Jake Xuereb</p>
+</div>
+			<hr>
+<div class='article'>
+			<h2 class='title'><a href='./../html/articles/1/article.html'>What is quantum?</a></h2>
+			<p class='date'>17th November 2019</p>
+			<p class='author'>Jake Xuereb</p>
+</div>
+<hr>
+		<div class='footer'>
+		<a href='./article-list-2.html' class='left'><span class='material-icons'>
+		chevron_left
+		</span></a>
+		<span class='page'>Page 3 of 3</span>
+		</div>
+      </div>
+    </div>
+
+    <script>
+      const body = document.querySelector("body");
+      const slideNav = document.querySelector("#slide-nav");
+
+      function toggle(element) {
+        if (element.innerHTML == "menu") {
+          element.innerHTML = "close";
+          body.style.overflowY = "hidden";
+          slideNav.style.left = "0%";
+        } else {
+          element.innerHTML = "menu";
+          body.style.overflowY = "auto";
+          slideNav.style.left = "-100%";
+        }
+      }
+    </script>
+  </body>
+</html>

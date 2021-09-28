@@ -13,7 +13,9 @@
 
     <!-- Syntax Highlighting -->
     <link rel="stylesheet" href="../../../plugins/highlight/styles/atom-one-light.min.css" />
-    <script src="../../../plugins/highlight/highlight.min.js">
+    <script src="../../../plugins/highlight/highlight.min.js"></script>
+
+    <script>
       hljs.configure({ languages: [] }); // Disbale Language Detection
       hljs.highlightAll();
     </script>
@@ -48,7 +50,7 @@
           <a href="../../../index.html">About Us</a>
           <a href="#">News</a>
           <a href="#">Events</a>
-          <a href="../../../article-list.html">Articles</a>
+          <a href="../../../lists/article-list-1.html">Articles</a>
           <a href="#">Contact Us</a>
           <a href="#">Membership</a>
         </div>
@@ -60,7 +62,7 @@
         <li><a href="../../../index.html">About Us</a></li>
         <li><a href="#">News</a></li>
         <li><a href="#">Events</a></li>
-        <li><a href="../../../article-list.html">Articles</a></li>
+        <li><a href="../../../lists/article-list-1.html">Articles</a></li>
         <li><a href="#">Contact Us</a></li>
         <li><a href="#">Membership</a></li>
       </ul>
@@ -69,14 +71,22 @@
     <div id="content-wrapper">
       <div id="content">
 <div id='title'>
-			<h1>Myth debunked: What is 0.999...?</h1>
-			<h4 class='author-date'>Xandru Mifsud - 10th February 2019</h4>
+			<h1>What is quantum?</h1>
+			<h4 class='author-date'>Jake Xuereb - 17th November 2019</h4>
 		</div>
 		<hr>
-<p>The Latin term ad infinitum translates to ‘to infinity’, which is commonly used for sequences of numbers or summations that never end. Attempting to understand infinity can be quite a perplexing task. To illustrate this, we pose the following question: what is \(0.999\ldots\), where 9 repeats infinitely many times? Note that \(0.999\ldots\) is the infinite sum \(0.9 + 0.09 + 0.009 + \cdots\)</p>
-<p>Imagine taking the difference between \(1\) and \(0.999\ldots9\), where the number of decimal places containing \(9\) is very large but finite. Albeit very small, the difference is larger than \(0\). This might lead one to conclude that \(0.999\ldots\) and \(1\) are not the same. However, extrapolating from the finite to the infinite in this way is wrong. In fact, \(0.999\ldots\) is the number \(1\) in disguise. This is not immediately obvious and can be challenging to accept. Such a phenomenon shows the importance of logic in mathematics.</p>
-<p>Showing that \(0.999\ldots = 1\) is a simple exercise in algebra. Start with \(x = 0.999\ldots\), and then multiply by \(10\) to obtain \(10x = 9.999\ldots\). Thus, we can write \(10x\) as \(9 + 0.999\ldots\), and hence, keeping in mind that \(x = 0.999\ldots\), we obtain \(10x = 9 + x\). Subtracting \(x\) from both sides yields \(9x = 9\), so \(x = 1\). But \(x = 0.999\ldots\), so \(0.999\ldots = 1\).</p>
-<p>This proof makes an initially bewildering fact suddenly seem trivial. So does one now understand what happens at infinity? It is imprudent to think so; we are always at odds with the concept of ad infinitum. Proclaimed mathematical genius Srinivasa Ramanujan, the subject of the film The Man Who Knew Infinity, is said to have explained his understandings as thoughts of God.</p>
+<h1 id="mathematics">Mathematics</h1>
+<p>\[ x =  \]</p>
+<p>The above equation is the quadratic formula which allows you to solve polynomials of the following form \( ax^2 + bx + c = 0 \). The following is a derivation of the above result:</p>
+<p>\[ ax^2 + bx + c = 0 \]</p>
+<p>\[ x^2 + x +  = 0 \]</p>
+<p>\[ x^2 + x = - \]</p>
+<p>\[ x^2 + x + ()^2 =  -  \]</p>
+<p>\[ (x + )^2 =  \]</p>
+<p>\[ x +  =  \]</p>
+<p>\[ x =  \]</p>
+<p>This is a test for converting from Markdown (incl. MathJax) to HTML. Hopefully, I can find a stable way to do this conversion by making used of a Makefile which allows me to create this when there are multiple .md files present in directory.</p>
+<p>What we have found is that the application “markdown” provided by the package “discount” (on Archlinux) is not a good conversion tool.</p>
       </div>
     </div>
 

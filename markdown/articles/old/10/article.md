@@ -95,9 +95,10 @@ Start numbering with offset:
 3. foo
 4. bar
 
-You cannot start with an order list with an offset,
-it will always start from 1. Let us see if we can
-find a rule for this is the markdown flags.
+Know you actually can start from an offset with pandoc.
+But the down fall of pandoc is that is very large compared
+to something like markdowna and it is reflected in how long it
+takes to acutally convert all of the files into html
 
 ## Code
 
@@ -118,7 +119,7 @@ Sample text here...
 
 Syntax highlighting
 
-``` js
+```js
 var foo = function (bar) {
   return bar++;
 };
@@ -126,7 +127,7 @@ var foo = function (bar) {
 console.log(foo(5));
 ```
 
-``` c
+```c
 void
 main(int argc, char **argv)
 {
