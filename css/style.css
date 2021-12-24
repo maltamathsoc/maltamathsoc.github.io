@@ -18,7 +18,7 @@
 
   --nav-padding: 15px;
   --left-right-padding: 25px;
-  --content-padding: 15px;
+  --content-padding: 25px;
 
   --nav-border: 2px;
 }
@@ -111,15 +111,15 @@ body {
   white-space: nowrap;
 }
 
-#top-menu a:link {
+a:link {
   color: var(--mms-blue);
 }
 
-#top-menu a:visited {
+a:visited {
   color: var(--mms-blue);
 }
 
-#top-menu a:hover {
+a:hover {
   color: var(--mms-brown);
 }
 

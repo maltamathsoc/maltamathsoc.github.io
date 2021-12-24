@@ -1,0 +1,174 @@
+#content h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+#membership {
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#name-label,
+#surname-label,
+#email-label,
+#nationality-label,
+#other-id-label,
+#maltese-id-label {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+#fullname {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+#fullname,
+#email,
+#nationality,
+#other-id,
+#maltese-id {
+  margin-bottom: 20px;
+}
+
+#name {
+  margin-right: 1rem;
+}
+
+#surname {
+  margin-left: 1rem;
+}
+
+#name-input,
+#surname-input,
+#email-input,
+#nationality-input,
+#other-id-input,
+#maltese-id-input {
+  display: block;
+
+  padding: 10px;
+
+  border: 2px solid grey;
+  border-radius: 5px;
+
+  font-family: var(--default-font-family);
+}
+
+#name-input:active,
+#surname-input:active,
+#email-input:active,
+#nationality-input:active,
+#other-id-input:active,
+#maltese-id-input:active {
+  border: 2px solid black;
+}
+
+#other-id {
+  display: flex;
+  align-content: center;
+}
+
+#maltese-id {
+  display: none;
+}
+
+#email-input,
+#other-id-input,
+#maltese-id-input {
+  width: 20rem;
+}
+
+#bottom {
+  display: flex;
+  align-items: center;
+}
+
+#checkbox {
+  height: 1rem;
+  width: 1rem;
+
+  padding: 0px;
+
+  margin-right: 0.5rem;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#checkbox-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#submit {
+  background-color: var(--mms-blue);
+  color: white;
+
+  border: 0px;
+  border-radius: 5px;
+
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  font-family: var(--default-font-family);
+  font-size: var(--large-font-size);
+
+  transition: 0.5s;
+}
+
+#submit:hover {
+  background-color: var(--mms-yellow);
+  color: black;
+}
+
+/* Widescreen */
+@media screen and (min-width: 550px) {
+}
+
+/* Smallscreen */
+@media screen and (max-width: calc(550px - 1px)) {
+  #admin-list li {
+    flex-direction: column;
+  }
+
+  #name {
+    margin-right: 0rem;
+  }
+
+  #name-input {
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+  }
+
+  #surname {
+    margin-left: 0rem;
+  }
+
+  #surname-input {
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+  }
+
+  #fullname {
+    flex-direction: column;
+  }
+
+  #email {
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+  }
+}

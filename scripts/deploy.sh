@@ -23,8 +23,7 @@ else
             "n") exit 1 ;;
             *) echo "Invalid option: $SERVER" ;;
         esac
-    done
-
+	done
 fi
 
 if [ -f "$CONFIG/dest" ]; then

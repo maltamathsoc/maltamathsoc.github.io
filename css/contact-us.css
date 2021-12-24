@@ -1,0 +1,195 @@
+#admin-list {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+#content h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+#admin-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+#message-us {
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#name-label,
+#surname-label {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+
+#email-label {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#message-label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#message {
+  display: block;
+  resize: none;
+
+  font-family: var(--default-font-family);
+
+  border: 2px solid grey;
+  border-radius: 5px;
+
+  padding: 10px;
+
+  height: 10rem;
+
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+#fullname {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+#name {
+  margin-bottom: 15px;
+  margin-right: 1rem;
+}
+
+#surname {
+  margin-bottom: 15px;
+  margin-left: 1rem;
+}
+
+#name-input,
+#surname-input,
+#email {
+  display: block;
+
+  padding: 10px;
+
+  border: 2px solid grey;
+  border-radius: 5px;
+
+  font-family: var(--default-font-family);
+}
+
+#email {
+  width: 20rem;
+}
+
+#name-input:active,
+#surname-input:active,
+#email:active,
+#message:active {
+  border: 2px solid black;
+}
+
+#bottom {
+  display: flex;
+  align-items: center;
+}
+
+#checkbox {
+  height: 1rem;
+  width: 1rem;
+
+  padding: 0px;
+
+  margin-right: 0.5rem;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#checkbox-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#submit {
+  background-color: var(--mms-blue);
+  color: white;
+
+  border: 0px;
+  border-radius: 5px;
+
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  font-family: var(--default-font-family);
+  font-size: var(--large-font-size);
+
+  transition: 0.5s;
+}
+
+#submit:hover {
+  background-color: var(--mms-yellow);
+  color: black;
+}
+
+/* Widescreen */
+@media screen and (min-width: 550px) {
+}
+
+/* Smallscreen */
+@media screen and (max-width: calc(550px - 1px)) {
+  #admin-list li {
+    flex-direction: column;
+  }
+
+  #name {
+    margin-right: 0rem;
+  }
+
+  #name-input {
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+  }
+
+  #surname {
+    margin-left: 0rem;
+  }
+
+  #surname-input {
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+  }
+
+  #fullname {
+    flex-direction: column;
+  }
+
+  #email {
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+  }
+}
